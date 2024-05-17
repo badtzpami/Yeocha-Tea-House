@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+
+  <link rel="stylesheet" href="output.css">
+    </head>
+    <body class="bg-white">    
+        <div class="container flex flex-col mx-auto bg-gray3">
+            <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
+        </div>
+<!-- sidebar -->
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+        <div class="flex items-center justify-center px-8 py-5">
+            <div class="flex items-center mr-5">
+            <div class="mr-5">
+                <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
+                <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="img/me gray bg.png" alt="avatar image">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-between px-8 py-5"> 
+          <div class="mr-2 ">
+            <a href="javascript:void(0)" class="dark:hover:text-pami hover:text-pami transition-colors duration-200 ease-in-out text-[1.075rem] font-medium text-xl text-gray1">Pamela Joy Bien</a>
+            <span class="text-secondary-dark dark:text-stone-500 font-medium block text-[0.95rem] text-gray1">Admin</span>
+        </div>
+
+        <a class="inline-flex relative items-center group justify-end text-base font-medium leading-normal text-center align-middle cursor-pointer rounded-[.95rem] transition-colors duration-150 ease-in-out text-dark bg-transparent shadow-none border-0 " href="javascript:void(0)">
+          <span class="leading-none transition-colors duration-200 ease-in-out peer shrink-0 group-hover:text-primary text-secondary-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+          </span>
+          </a>
+        </div>
+
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+
+        <div class="relative pl-3 my-5 overflow-y-scroll">
+            <div class="flex flex-col w-full font-medium">
+            <!-- menu item -->
+            <div class="block">
+              <div class="px-4">
+              <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Menu</span>
+              </div>
+          </div>
+             <!-- menu item: dashboard -->
+             <div class="flex items-center px-4">
+              <i class="fa-solid fa-chart-column text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Dashboard
+                  </a>
+                </span>
+              </div>  
+            </div>
+             <!-- menu item: categories -->
+             <div class="flex items-center px-4">
+              <i class="fa-solid fa-list text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/categories.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Categories
+                  </a>
+                </span>
+              </div>  
+            </div>
+<!-- Menu item : Reports -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+      <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Reports
+      </a>
+    </span>
+  </div>  
+  <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleReportsSubMenu()"></i>
+</div>
+<div id="reportsSubMenu" class="hidden ml-10">
+  <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+  <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+  <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+</div>
+<!-- Menu item : Products -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-tag text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+      <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Products
+      </a>
+    </span>
+  </div>  
+  <i id="productsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleProductsSubMenu()"></i>
+</div>
+<div id="productsSubMenu" class="hidden ml-10">
+  <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
+  <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
+</div>
+            <!-- menu item: Supplier -->
+            <div class="flex items-center px-4">
+              <i class="fa-solid fa-box text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/supplier.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Supplier
+                  </a>
+                </span>
+              </div>  
+            </div>
+             <!-- menu item: Logistics -->
+        <div class="flex items-center px-4">
+          <i class="fa-solid fa-truck text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                      Logistics
+                    </a>
+                  </span>
+                </div>  
+              </div>
+<!-- Others Section-->
+            <div class="block pt-5 pb-[.15rem]">
+                <div class="px-4 py-[.65rem]">
+                <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
+                </div>
+            </div>
+
+           <!-- menu item: accounts -->
+           <div class="flex items-center px-4">
+            <i class="fa-solid fa-user text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="/src/accounts.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  Accounts
+                </a>
+              </span>
+            </div>  
+          </div>
+           <!-- menu item: Logout -->
+           <div class="flex items-center px-4">
+            <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  Log out
+                </a>
+              </span>
+            </div>  
+          </div>
+            </div>
+            </div>
+        </aside>
+        </div>
+
+
+<!-- Categories -->
+<div class="grid grid-cols-2 gap-4 ">
+  <!-- Left column -->
+  
+  <div class="bg-white ml-96 p-8">
+    <!-- May margin left 96, since yung left column is nagoover lap sa side bar -->
+    <h2 class="text-pami text-xl font-bold"> <i class="fa-solid fa-list mx-4 py-10 "></i>Add New Category</h2>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-white1">
+      <table class="w-full text-base text-left rtl:text-right text-gray1 ">
+          <thead class="text-lg text-gray2  uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
+
+            <div class="flex flex-col m-6 text-gray1">
+              <!-- Input field -->
+              <input type="text" placeholder="Category Name" class="w-106 px-4 py-4 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+          
+              <!-- Button -->
+              <button class="h-12 w-40 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-pami hover:border hover:border-pami bg-pami shadow-md  hover:bg-white hover:text-pami hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">
+                Add Category
+            </button> </a>
+            </div>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!-- Right column -->
+  <div class="bg-white1 p-4 mx-20">
+    <h2 class="text-pami text-xl font-bold"> <i class="fa-solid fa-list mx-4 py-10"></i>All Categories</h2>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-base text-left rtl:text-right text-gray1">
+          <thead class="text-base uppercase bg-pami text-white1">
+              <tr>
+                  <th scope="col" class="px-6 py-3">
+                    #
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Categories
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Action
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      1
+                  </th>
+                  <td class="px-6 py-4">
+                    Accessories
+                  </td>
+                  <td class="px-6 py-4"> 
+                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                  </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      2
+                  </th>
+                  <td class="px-6 py-4">
+                    Apparel
+                 </td>
+                  <td class="px-6 py-4"> 
+                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                  </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    3
+                </th>
+                <td class="px-6 py-4">
+                  Appliances 
+                </td>
+                <td class="px-6 py-4"> 
+                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    4
+                </th>
+                <td class="px-6 py-4">
+                  Beauty and Personal Care 
+                </td>
+                <td class="px-6 py-4"> 
+                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  5
+              </th>
+              <td class="px-6 py-4">
+                Books and Stationery
+              </td>
+              <td class="px-6 py-4"> 
+                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  6
+              </th>
+              <td class="px-6 py-4">
+                Electronics 
+              </td>
+              <td class="px-6 py-4"> 
+                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                7
+            </th>
+            <td class="px-6 py-4">
+              Health and Wellness
+            </td>
+            <td class="px-6 py-4"> 
+              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                8
+            </th>
+            <td class="px-6 py-4">
+              Home Decor
+            </td>
+            <td class="px-6 py-4"> 
+              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              9
+          </th>
+          <td class="px-6 py-4">
+            Kitchen and Dining
+          </td>
+          <td class="px-6 py-4"> 
+            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+          </td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              10
+          </th>
+          <td class="px-6 py-4">
+            Pet Supplies 
+          </td>
+          <td class="px-6 py-4"> 
+            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+          </td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            11
+        </th>
+        <td class="px-6 py-4">
+          Sports and Outdoors 
+        </td>
+        <td class="px-6 py-4"> 
+          <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+          <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+        </td>
+    </tr>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            12
+        </th>
+        <td class="px-6 py-4">
+          Toys and Games
+        </td>
+        <td class="px-6 py-4"> 
+          <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
+          <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+        </td>
+    </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+        <!-- sub menu -->
+        <script src="submenu.js"> </script>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    </body>
+<html>
