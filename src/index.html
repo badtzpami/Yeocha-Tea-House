@@ -1,90 +1,149 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categories</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
-
-  <link rel="stylesheet" href="output.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Try Try</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-<h2 class="text-center text-red-400 bg-black">Hello</h2>
-<div class="bg-pami text-red-300 text-right ">Background color is violet</div>
-<div class="bg-pami text-mejogray ">mejo gray color is violet</div>
+<body class="bg-gray-100">
 
-<div class="bg-white2 text-pami ">Background color is white 2</div>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
 
-<div class="bg-white1 text-pami ">Background color is white 1</div>
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Total Sales</h3>
+            <p class="text-2xl">$50,000</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Total Orders</h3>
+            <p class="text-2xl">1,200</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Total Products</h3>
+            <p class="text-2xl">150</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Total Suppliers</h3>
+            <p class="text-2xl">25</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Total Revenue</h3>
+            <p class="text-2xl">$120,000</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h3 class="text-lg font-semibold">Pending Orders</h3>
+            <p class="text-2xl">15</p>
+        </div>
+    </div>
 
-<div class="relative" data-twe-dropdown-ref>
-  <a
-    class="flex items-center rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-    href="#"
-    type="button"
-    id="dropdownMenuButton2"
-    data-twe-dropdown-toggle-ref
-    aria-expanded="false"
-    data-twe-ripple-init
-    data-twe-ripple-color="light">
-    Dropdown link
-    <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor">
-        <path
-          fill-rule="evenodd"
-          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-          clip-rule="evenodd" />
-      </svg>
-    </span>
-  </a>
-  <ul
-    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
-    aria-labelledby="dropdownMenuButton2"
-    data-twe-dropdown-menu-ref>
-    <li>
-      <a
-        class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-        href="#"
-        data-twe-dropdown-item-ref
-        >Action</a
-      >
-    </li>
-    <li>
-      <a
-        class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-        href="#"
-        data-twe-dropdown-item-ref
-        >Another action</a
-      >
-    </li>
-    <li>
-      <a
-        class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-        href="#"
-        data-twe-dropdown-item-ref
-        >Something else here</a
-      >
-    </li>
-  </ul>
+    <!-- Sales Trends Chart -->
+    <div class="bg-white p-6 shadow rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-4">Sales Trends</h3>
+        <!-- Insert a line chart here -->
+        <canvas id="salesTrendsChart" class="h-64"></canvas>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="bg-white p-6 shadow rounded-lg">
+        <h3 class="text-lg font-semibold mb-4">Recent Activity</h3>
+        <ul>
+            <li class="mb-2">
+                <div class="flex items-center">
+                    <i class="fas fa-box text-blue-500 mr-2"></i>
+                    <span>New product added: <strong>Product A</strong></span>
+                </div>
+                <span class="text-gray-500 text-sm">5 minutes ago</span>
+            </li>
+            <li class="mb-2">
+                <div class="flex items-center">
+                    <i class="fas fa-truck text-green-500 mr-2"></i>
+                    <span>Order #12345 shipped</span>
+                </div>
+                <span class="text-gray-500 text-sm">20 minutes ago</span>
+            </li>
+            <li class="mb-2">
+                <div class="flex items-center">
+                    <i class="fas fa-user-plus text-yellow-500 mr-2"></i>
+                    <span>New supplier added: <strong>Supplier X</strong></span>
+                </div>
+                <span class="text-gray-500 text-sm">1 hour ago</span>
+            </li>
+            <!-- Add more recent activities as needed -->
+        </ul>
+    </div>
 </div>
 
-<script src="submenu.js"> </script>
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-<script
-type="text/javascript"
-src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+<!-- Cards -->
+div class="flex items-end ml-96 mx-32  flex-wrap justify-center gap-8 mt-12">
+<!-- Total Sales -->
+
+<div class="bg-white text-center text-surface shadow-seconda dark:text-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-4 mt-20">
+  <div class="px-6 py-3 border-b-2 border-neutral-100 dark:border-white/10 bg-pami text-white1 text-xl rounded-t-lg">
+    Total Sales 
+  </div>
+  <div class="p-6">
+    <h5 class="mb-2 text-3xl font-normal leading-tight items-center">
+      ₱ 346,000
+    </h5>
+  </div>
+</div>
+
+<div class="bg-white text-center text-surface shadow-seconda dark:text-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-4">
+  <div class="px-6 py-3 border-b-2 border-neutral-100 dark:border-white/10 bg-pami text-white1 text-xl rounded-t-lg">
+    Total Sales 
+  </div>
+  <div class="p-6">
+    <h5 class="mb-2 text-3xl font-normal leading-tight items-center">
+      ₱ 346,000
+    </h5>
+  </div>
+</div>
+
+<div class="bg-white text-center text-surface shadow-seconda dark:text-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-4">
+  <div class="px-6 py-3 border-b-2 border-neutral-100 dark:border-white/10 bg-pami text-white1 text-xl rounded-t-lg">
+    Total Sales 
+  </div>
+  <div class="p-6">
+    <h5 class="mb-2 text-3xl font-normal leading-tight items-center">
+      ₱ 346,000
+    </h5>
+  </div>
+</div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Example chart initialization (replace with your actual chart data and options)
+    var ctx = document.getElementById('salesTrendsChart').getContext('2d');
+    var salesTrendsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Sales',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

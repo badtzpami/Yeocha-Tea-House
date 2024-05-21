@@ -122,6 +122,17 @@
                 </span>
               </div>  
             </div>
+         <!-- menu item: Logistics -->
+         <div class="flex items-center px-4">
+          <i class="fa-solid fa-truck text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                      Logistics
+                    </a>
+                  </span>
+                </div>  
+              </div>
 <!-- Others Section-->
             <div class="block pt-5 pb-[.15rem]">
                 <div class="px-4 py-[.65rem]">
@@ -181,17 +192,24 @@
             <option value="#">Apparel</option>
             <option value="#">Appliances</option>
             <option value="#">Beauty and Personal Care</option>
+            <option value="#">Books and Stationery </option>
+            <option value="#">Electronics </option>
+            <option value="#">Health and Wellness </option>
+            <option value="#">Home Decor </option>
+            <option value="#">Kitchen and Dining </option>
+            <option value="#">Pet Supplies </option>
+
         </select>
       </form>
      </div>
 
      <div class="">
-        <label for="uploadFile1 "
-        class="flex bg-pami hover:bg-white hover:text-pami text-white  hover:border hover:border-pami text-gray text-base px-4 py-4 outline-none rounded border border-pami focus:border-pami w-96 cursor-pointer mx-auto font-[sans-serif]">
-        <i class="fas fa-cloud-arrow-up text-white hover:text-pami py-1 pr-3"></i>
-        Select Product Photo
-        <input type="file" id='uploadFile1' class="hidden"/>
+      <label for="uploadFile1" 
+             class="flex bg-pami hover:bg-white hover:text-pami text-white hover:border hover:border-pami text-gray text-base px-4 py-4 outline-none rounded border border-pami focus:border-pami w-96 cursor-pointer mx-auto font-[sans-serif]">
+          <i class="fas fa-cloud-arrow-up text-white hover:text-pami py-1 pr-3"></i>
+          Select Product Photo
       </label>
+      <input type="file" id="uploadFile1" class="hidden"/>
   </div>
 
 
@@ -272,7 +290,13 @@
           restrictToNumbers(sellingPriceInput);
           restrictToNumbers(buyingPriceInput);
         </script>
-        
-   
+
+        <!-- upload image -->
+        <script>
+          document.querySelector('label[for="uploadFile1"]').addEventListener('click', function() {
+              document.getElementById('uploadFile1').click();
+          });
+      </script>
+  
     </body>
 <html>
