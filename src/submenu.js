@@ -15,3 +15,12 @@ function toggleProductsSubMenu() {
   toggleIcon.classList.toggle('fa-angle-down', !subMenu.classList.contains('hidden'));
   toggleIcon.classList.toggle('fa-angle-up', subMenu.classList.contains('hidden'));
 }
+
+function toggleAccountsSubMenu() {
+  const subMenu = document.getElementById('accountsSubMenu');
+  const toggleIcon = document.getElementById('accountsToggleIcon');
+  
+  subMenu.classList.toggle('hidden');
+  toggleIcon.classList.toggle('fa-angle-down', !subMenu.classList.contains('hidden'));
+  toggleIcon.classList.toggle('fa-angle-up', subMenu.classList.contains('hidden'));
+}

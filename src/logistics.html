@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <link rel="stylesheet" href="output.css">
+    </head>
+    <body class="bg-white">    
+        <div class="container flex flex-col mx-auto bg-white">
+            <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
+        </div>
+<!-- sidebar -->
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+        <div class="flex items-center justify-center px-8 py-5">
+            <div class="flex items-center mr-5">
+            <div class="mr-5">
+                <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
+                <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="img/me gray bg.png" alt="avatar image">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-between px-8 py-5"> 
+          <div class="mr-2 ">
+            <a href="javascript:void(0)" class="dark:hover:text-pami hover:text-pami transition-colors duration-200 ease-in-out text-[1.075rem] font-medium text-xl text-gray1">Pamela Joy Bien</a>
+            <span class="text-secondary-dark dark:text-stone-500 font-medium block text-[0.95rem] text-gray1">Admin</span>
+        </div>
+
+        <a class="inline-flex relative items-center group justify-end text-base font-medium leading-normal text-center align-middle cursor-pointer rounded-[.95rem] transition-colors duration-150 ease-in-out text-dark bg-transparent shadow-none border-0 " href="javascript:void(0)">
+          <span class="leading-none transition-colors duration-200 ease-in-out peer shrink-0 group-hover:text-primary text-secondary-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+          </span>
+          </a>
+        </div>
+
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+
+        <div class="relative pl-3 my-5 overflow-y-scroll">
+            <div class="flex flex-col w-full font-medium">
+            <!-- menu item -->
+            <div class="block">
+              <div class="px-4">
+              <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Menu</span>
+              </div>
+          </div>
+             <!-- menu item: dashboard -->
+             <div class="flex items-center px-4">
+              <i class="fa-solid fa-chart-column text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Dashboard
+                  </a>
+                </span>
+              </div>  
+            </div>
+             <!-- menu item: categories -->
+           
+             <div class="flex items-center px-4">
+              <i class="fa-solid fa-list text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/categories.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Categories
+                  </a>
+                </span>
+              </div>  
+            </div> 
+<!-- Menu item : Reports -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+      <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Reports
+      </a>
+    </span>
+  </div>  
+  <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleReportsSubMenu()"></i>
+</div>
+
+<div id="reportsSubMenu" class="hidden ml-10">
+  <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+  <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+  <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+</div>
+<!-- Menu item : Products -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-tag text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+      <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Products
+      </a>
+    </span>
+  </div>  
+  <i id="productsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleProductsSubMenu()"></i>
+</div>
+<div id="productsSubMenu" class="hidden ml-10">
+  <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
+  <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
+</div>
+            <!-- menu item: Supplier -->
+            <div class="flex items-center px-4">
+              <i class="fa-solid fa-box text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/supplier.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                    Supplier
+                  </a>
+                </span>
+              </div>  
+            </div>
+ <!-- menu item: Logistics -->
+        <div class="flex items-center px-4">
+            <i class="fa-solid fa-truck text-2xl"></i>
+              <div>
+                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                  <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                        Logistics
+                      </a>
+                    </span>
+                  </div>  
+                </div>
+<!-- Others Section-->
+            <div class="block pt-5 pb-[.15rem]">
+                <div class="px-4 py-[.65rem]">
+                <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
+                </div>
+            </div>
+
+          <!-- Menu item : Accounts -->
+          <div class="flex items-center px-4">
+            <i class="fa-solid fa-user text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
+                <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  Accounts
+                </a>
+              </span>
+            </div>  
+            <i id="accountsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+          </div>
+          <div id="accountsSubMenu" class="hidden ml-10">
+            <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
+            <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
+          </div>         
+
+           <!-- menu item: Logout -->
+           <div class="flex items-center px-4">
+            <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="/src/login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  Log out
+                </a>
+              </span>
+            </div>  
+          </div>
+            </div>
+            </div>
+        </aside>
+        </div>
+
+
+<!-- Shipment Tracking  -->
+<h5 class="text-4xl font-bold text-gray1 dark:text-white ml-[340px] my-10">Shipment Tracking</h5>
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-[340px] mx-20">
+    <table class="w-full text-base text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-bold text-gray1 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Shipment ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Expected Delivery
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Courier
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Tracking number
+              </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  12345
+                </th>
+                <td class="px-6 py-4 text-green-600">
+                    In Transit
+                </td>
+                <td class="px-6 py-4">
+                    May 29,2024
+                </td>
+                <td class="px-6 py-4">
+                    Lalamove
+                </td>
+                <td class="px-6 py-4">
+                  1Z999AA10123456784
+              </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  12346
+                </th>
+                <td class="px-6 py-4 text-green-600">
+                  In Transit
+              </td>
+                <td class="px-6 py-4">
+                  May 27,2024
+                </td>
+                <td class="px-6 py-4">
+                    LBC
+                </td>
+                <td class="px-6 py-4">
+                  1Z999AA10123456785
+              </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                12347
+              </th>
+              <td class="px-6 py-4 text-green-600">
+                In Transit
+            </td>
+              <td class="px-6 py-4">
+                May 26,2024
+              </td>
+              <td class="px-6 py-4">
+                J&T Express
+              </td>
+              <td class="px-6 py-4">
+                1Z999AA10123456786
+            </td>
+              <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              12348
+            </th>
+            <td class="px-6 py-4 text-red-600">
+             Delivered
+          </td>
+            <td class="px-6 py-4">
+              May 25,2024
+            </td>
+            <td class="px-6 py-4">
+              J&T Express
+            </td>
+            <td class="px-6 py-4">
+              1Z999AA10123456787
+          </td>
+            <td class="px-6 py-4 text-right">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+            </td>
+        </tr>
+            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  12349
+                </th>
+                <td class="px-6 py-4 text-red-600">
+                  Delivered
+              </td>
+                <td class="px-6 py-4">
+                  May 23,2024
+                </td>
+                <td class="px-6 py-4">
+                    Ninja Van
+                </td>
+                <td class="px-6 py-4">
+                  1Z999AA10123456788
+              </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Warehouse Management  -->
+<h5 class="text-4xl font-bold text-gray1 dark:text-white ml-[340px] my-10">Warehouse Management</h5>
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-[340px] mx-20">
+    <table class="w-full text-base text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-bold text-gray1 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                   Warehouse
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    LOcation
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Inventory Levels
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Space Utilization
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Details</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Warehouse 1
+                </th>
+                <td class="px-6 py-4">
+                   Divisoria
+                </td>
+                <td class="px-6 py-4">
+                    1000 units
+                </td>
+                <td class="px-24  py-4">
+                    75%
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Warehouse 2
+              </th>
+              <td class="px-6 py-4">
+                 San Pedro
+              </td>
+              <td class="px-6 py-4">
+                  1000 units
+              </td>
+              <td class="px-24  py-4">
+                  65%
+              </td>
+              <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+              </td>
+          </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Warehouse 3
+                </th>
+                <td class="px-6 py-4">
+                   Calamba
+                </td>
+                <td class="px-6 py-4">
+                    1000 units
+                </td>
+                <td class="px-24 py-4">
+                    85%
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+<!-- Order Fulfillment  -->
+<h5 class="text-4xl font-bold text-gray1 dark:text-white ml-[340px] my-10">Order Fulfillment</h5>
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-[340px] mx-20">
+    <table class="w-full text-base text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-bold text-gray1 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Order ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Customer
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Order Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Expected Shipment Date
+              </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Details</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  54321
+                </th>
+                <td class="px-6 py-4 text-yellow-600">
+                  Picking
+                </td>
+                <td class="px-6 py-4">
+                    Trafalgar Law
+                </td>
+                <td class="px-6 py-4">
+                    May 17, 2024
+                </td>
+                <td class="px-6 py-4">
+                  May 19, 2024
+              </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                54321
+              </th>
+              <td class="px-6 py-4 text-yellow-600">
+                Picking
+              </td>
+              <td class="px-6 py-4">
+                  Roronoa Zoro
+              </td>
+              <td class="px-6 py-4">
+                  May 16, 2024
+              </td>
+              <td class="px-6 py-4">
+                May 18, 2024
+            </td>
+            <td class="px-6 py-4 text-right">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+          </td>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                54321
+              </th>
+              <td class="px-6 py-4 text-yellow-600">
+                Picking
+              </td>
+              <td class="px-6 py-4">
+                  Monkey D. Luffy
+              </td>
+              <td class="px-6 py-4">
+                  May 15, 2024
+              </td>
+              <td class="px-6 py-4">
+                May 17, 2024
+            </td>
+              <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              54321
+            </th>
+            <td class="px-6 py-4 text-green-600">
+              Shipped
+            </td>
+            <td class="px-6 py-4">
+                Vinsmoke Sanji
+            </td>
+            <td class="px-6 py-4">
+                May 14, 2024
+            </td>
+            <td class="px-6 py-4">
+              May 16, 2024
+          </td>
+            <td class="px-6 py-4 text-right">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            54321
+          </th>
+          <td class="px-6 py-4 text-green-600">
+            Shipped
+          </td>
+          <td class="px-6 py-4">
+              Toni Choppa
+          </td>
+          <td class="px-6 py-4">
+              May 13, 2024
+          </td>
+          <td class="px-6 py-4">
+            May 15, 2024
+        </td>
+          <td class="px-6 py-4 text-right">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+          </td>
+      </tr> 
+        </tbody>
+    </table>    
+</div>
+
+<!-- Supplier Management  -->
+<h5 class="text-4xl font-bold text-gray1 dark:text-white ml-[340px] my-10">Supplier Management</h5>
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-[340px] mx-20 mb-20">
+    <table class="w-full text-base text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-bold text-gray1 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                   Supplier
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Next Delivery Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Last Delivery Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Contact
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Details</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Supplier X
+                </th>
+                <td class="px-6 py-4">
+                  May 21, 2024
+                </td>
+                <td class="px-6 py-4">
+                  April 20, 2024
+                </td>
+                <td class="px-6 py-4">
+                  supplierx@gmail.com
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Supplier Y
+              </th>
+              <td class="px-6 py-4">
+                May 22, 2024
+              </td>
+              <td class="px-6 py-4">
+                April 20, 2024
+              </td>
+              <td class="px-6 py-4">
+                suppliery@gmail.com
+              </td>
+              <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              Supplier Z
+            </th>
+            <td class="px-6 py-4">
+              May 23, 2024
+            </td>
+            <td class="px-6 py-4">
+              April 23, 2024
+            </td>
+            <td class="px-6 py-4">
+              supplierz@gmail.com
+            </td>
+            <td class="px-6 py-4 text-right">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Details</a>
+            </td>
+        </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+  
+
+
+
+
+
+
+        <!-- scripts -->
+        <!-- sub menu -->
+        <script src="submenu.js"> </script>
+    </body>
+<html>
