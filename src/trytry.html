@@ -3,174 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supplier Management</title>
+    <title>Reports</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .border-pami {
+            border-color: #D4AF37; /* Custom border color */
+        }
+        .bg-pami {
+            background-color: #D4AF37; /* Custom background color */
+        }
+        .hover\:bg-white1:hover {
+            background-color: #ffffff; /* Hover background color */
+        }
+        .hover\:text-pami:hover {
+            color: #D4AF37; /* Hover text color */
+        }
+        .text-gray1 {
+            color: #4A4A4A; /* Custom text color */
+        }
+        .text-gray2 {
+            color: #6B7280; /* Custom text color */
+        }
+    </style>
 </head>
 <body class="bg-gray-100 p-6">
-
-    <!-- Container -->
-    <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6">Supplier Management</h1>
-
-        <!-- Supplier List -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Supplier List</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier Name</th>
-                            <th class="p-3">Contact Information</th>
-                            <th class="p-3">Location</th>
-                            <th class="p-3">Primary Contact</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier X</td>
-                            <td class="p-3">supplierx@example.com<br>(123) 456-7890</td>
-                            <td class="p-3">New York, USA</td>
-                            <td class="p-3">John Doe</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier Y</td>
-                            <td class="p-3">suppliery@example.com<br>(987) 654-3210</td>
-                            <td class="p-3">Los Angeles, USA</td>
-                            <td class="p-3">Jane Smith</td>
-                        </tr>
-                        <!-- Add more suppliers as needed -->
-                    </tbody>
-                </table>
+    <div class="container mx-auto p-8 bg-white rounded-lg shadow-md">
+        <h2 class="text-pami text-2xl font-bold mb-6"><i class="fa-solid fa-chart-bar mx-4"></i>Reports</h2>
+        
+        <!-- Report Filters -->
+        <div class="flex justify-between mb-6">
+            <div class="flex items-center space-x-4">
+                <div>
+                    <label for="start_date" class="block text-gray2 text-sm font-medium">Start Date:</label>
+                    <input type="date" id="start_date" name="start_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-pami sm:text-sm">
+                </div>
+                <div>
+                    <label for="end_date" class="block text-gray2 text-sm font-medium">End Date:</label>
+                    <input type="date" id="end_date" name="end_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-pami sm:text-sm">
+                </div>
+                <button class="mt-7 h-10 w-32 rounded-lg px-4 py-2 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50">Filter</button>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="h-10 w-32 rounded-lg px-4 py-2 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50">Download PDF</button>
+                <button class="h-10 w-32 rounded-lg px-4 py-2 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50">Export Excel</button>
             </div>
         </div>
 
-        <!-- Delivery Schedule -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Delivery Schedule</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier Name</th>
-                            <th class="p-3">Next Delivery Date</th>
-                            <th class="p-3">Last Delivery Date</th>
-                            <th class="p-3">Delivery Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier X</td>
-                            <td class="p-3">May 21st, 2024</td>
-                            <td class="p-3">April 20th, 2024</td>
-                            <td class="p-3">Monthly</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier Y</td>
-                            <td class="p-3">May 22nd, 2024</td>
-                            <td class="p-3">April 22nd, 2024</td>
-                            <td class="p-3">Weekly</td>
-                        </tr>
-                        <!-- Add more deliveries as needed -->
-                    </tbody>
-                </table>
-            </div>
+        <!-- Report Table -->
+        <div class="relative overflow-x-auto sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray2">
+                <thead class="text-xs text-gray2 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">Date</th>
+                        <th scope="col" class="px-6 py-3">Category</th>
+                        <th scope="col" class="px-6 py-3">Details</th>
+                        <th scope="col" class="px-6 py-3">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <td class="px-6 py-4">2024-05-20</td>
+                        <td class="px-6 py-4">Sales</td>
+                        <td class="px-6 py-4">Product A sold</td>
+                        <td class="px-6 py-4">$100</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b dark:bg-gray-700 dark:border-gray-600">
+                        <td class="px-6 py-4">2024-05-21</td>
+                        <td class="px-6 py-4">Products</td>
+                        <td class="px-6 py-4">Product B added</td>
+                        <td class="px-6 py-4">$200</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
         </div>
+    </div>
 
-        <!-- Performance Metrics -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Performance Metrics</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier Name</th>
-                            <th class="p-3">On-Time Delivery Rate</th>
-                            <th class="p-3">Quality Rating</th>
-                            <th class="p-3">Average Delivery Time</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier X</td>
-                            <td class="p-3">95%</td>
-                            <td class="p-3">4.5/5</td>
-                            <td class="p-3">5 days</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier Y</td>
-                            <td class="p-3">90%</td>
-                            <td class="p-3">4.0/5</td>
-                            <td class="p-3">7 days</td>
-                        </tr>
-                        <!-- Add more metrics as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <!-- Example script for downloading PDF and Excel -->
+    <script>
+        // Dummy download PDF function
+        document.querySelector('button:contains("Download PDF")').addEventListener('click', function() {
+            alert('PDF download functionality goes here.');
+        });
 
-        <!-- Orders and Invoices -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Orders and Invoices</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier Name</th>
-                            <th class="p-3">Order ID</th>
-                            <th class="p-3">Order Date</th>
-                            <th class="p-3">Amount</th>
-                            <th class="p-3">Invoice Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier X</td>
-                            <td class="p-3">#78901</td>
-                            <td class="p-3">April 15th, 2024</td>
-                            <td class="p-3">$5000</td>
-                            <td class="p-3 text-green-500">Paid</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">Supplier Y</td>
-                            <td class="p-3">#78902</td>
-                            <td class="p-3">April 10th, 2024</td>
-                            <td class="p-3">$3000</td>
-                            <td class="p-3 text-yellow-500">Pending</td>
-                        </tr>
-                        <!-- Add more orders and invoices as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Communication Logs -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Communication Logs</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <ul class="list-disc list-inside">
-                    <li>
-                        <span class="font-semibold">Supplier X:</span> Discussed upcoming order on April 20th, 2024.
-                    </li>
-                    <li>
-                        <span class="font-semibold">Supplier Y:</span> Follow-up on delayed delivery on April 22nd, 2024.
-                    </li>
-                    <!-- Add more communication logs as needed -->
-                </ul>
-            </div>
-        </div>
-
-        <!-- Contracts and Agreements -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Contracts and Agreements</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier Name</th>
-                            <th class="p-3">Contract Start Date</th>
-                            <th class="p-3">Contract End Date</th>
-                            <th class="p-3">Renewal Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
+        // Dummy export Excel function
+        document.querySelector('button:contains("Export Excel")').addEventListener('click', function() {
+            alert('Excel export functionality goes here.');
+        });
+    </script>
+</body>
+</html>
