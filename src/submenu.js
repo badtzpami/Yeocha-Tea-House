@@ -24,3 +24,12 @@ function toggleAccountsSubMenu() {
   toggleIcon.classList.toggle('fa-angle-down', !subMenu.classList.contains('hidden'));
   toggleIcon.classList.toggle('fa-angle-up', subMenu.classList.contains('hidden'));
 }
+
+function toggleSupplierSubMenu() {
+  const subMenu = document.getElementById('supplierSubMenu');
+  const toggleIcon = document.getElementById('supplierToggleIcon');
+  
+  subMenu.classList.toggle('hidden');
+  toggleIcon.classList.toggle('fa-angle-down', !subMenu.classList.contains('hidden'));
+  toggleIcon.classList.toggle('fa-angle-up', subMenu.classList.contains('hidden'));
+}

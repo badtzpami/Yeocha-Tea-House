@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta charset="UTF-8">
-      <title>Add New User</title>
+      <title>Add Supplier</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -127,9 +127,9 @@
 </div>
 </div>
 <div id="supplierSubMenu" class="hidden ml-10">
-  <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
-  <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
-  </div>   
+<a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
+<a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
+</div>   
 
 <!-- menu item: Logistics -->
       <div class="flex items-center px-4">
@@ -186,35 +186,33 @@
 
 
         <div class="container mx-auto my-20 px-96 bg-white rounded-lg  ml-96">
-          <h2 class="text-pami text-2xl font-bold mb-6"><i class="fa-solid fa-list mx-4"></i>Add New User</h2>
+          <h2 class="text-pami text-2xl font-bold mb-6"><i class="fa-solid fa-list mx-4"></i>Add Supplier</h2>
           <div class="relative overflow-x-auto sm:rounded-lg w-3/4 bg-white">
               <div class="w-full text-base text-left text-gray2">
                   <div class="text-lg text-gray2 uppercase  dark:bg-gray-700 dark:text-gray-400">
                       <div class="flex flex-col m-6 text-gray1">
-                          <!-- Name -->
-                          <label for="name" class="text-lg font-normal mb-2">Name:</label>
-                          <input type="text" id="name" name="name" placeholder="Full Name" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <!-- Supplier Name -->
+                          <label for="Supplier Name" class="text-lg font-normal mb-2">Supplier Name:</label>
+                          <input type="text" id="Supplier Name" name="Supplier Name" placeholder="Supplier Name" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
                           
-                          <!-- Username -->
-                          <label for="username" class="text-lg font-normal mb-2">Username:</label>
-                          <input type="text" id="username" name="username" placeholder="Username" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <!-- Email -->
+                          <label for="email" class="text-lg font-normal mb-2">Email:</label>
+                          <input type="Email" id="email" name="email" placeholder="Email" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
                           
-                          <!-- Password -->
-                          <label for="password" class="text-lg font-normal mb-2">Password:</label>
-                          <input type="password" id="password" name="password" placeholder="Password" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
-                          
-                          <!-- User Roles -->
-                          <label for="user_role" class="text-lg font-normal mb-2">User Roles:</label>
-                          <select id="user_role" name="user_role" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
-                              <option value="" selected disabled>Select User Role</option>
-                              <option value="admin">Admin</option>
-                              <option value="manager">Manager</option>
-                              <option value="user">User</option>
-                          </select>
-                          
+                          <!-- Contact Number -->
+                          <label for="Contact Number" class="text-lg font-normal mb-2">Contact Number:</label>
+                          <input type="tel" id="Contact Number" name="Contact Number" placeholder="Contact Number" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+
+                          <!-- Location -->
+                          <label for="Location" class="text-lg font-normal mb-2">Location:</label>
+                          <input type="text" id="Location" name="Location" placeholder="Location" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">                         
+                        <!-- Primary Contact -->
+                        <label for=" Primary Contact" class="text-lg font-normal mb-2"> Primary Contact:</label>
+                        <input type="text" id=" Primary Contact" name=" Primary Contact" placeholder=" Primary Contact" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">                          
+                        
                           <!-- Button -->
                           <div class="flex justify-center mt-6">
-                              <button class="h-14 w-44 rounded-2xl px-4 py-3 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">Add User</button>
+                              <button class="h-14 w-44 rounded-2xl px-4 py-3 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">Add Supplier</button>
                           </div>
                       </div>
                   </div>
@@ -225,8 +223,7 @@
   
         <!-- sub menu -->
         <script src="/src/submenu.js"> </script>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   
     </body>

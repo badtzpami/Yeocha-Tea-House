@@ -2,23 +2,19 @@
 <html>
     <head>
       <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <title>Add New User</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-  <link rel="stylesheet" href="output.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+      <link rel="stylesheet" href="output.css">
     </head>
     <body class="bg-white">    
-        <div class="container flex flex-col mx-auto bg-white">
+              <div class="container flex flex-col mx-auto bg-white">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
         </div>
         
@@ -133,7 +129,7 @@
 <div id="supplierSubMenu" class="hidden ml-10">
   <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
   <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
-</div>   
+  </div>   
 
  <!-- menu item: Logistics -->
         <div class="flex items-center px-4">
@@ -189,152 +185,59 @@
         </div>
 
 
-<!-- Dashboard -->
-<h5 class="ml-[340px] mt-10 text-4xl font-bold text-gray1 dark:text-white">Overview</h5>
 
-<div class="bg-white ml-96 p-8 items-center grid grid-cols-3">
+<!-- Add New User -->
+<div class="container mx-auto my-20 px-96 bg-white rounded-lg  ml-96">
+  <h2 class="text-pami text-2xl font-bold mb-6"><i class="fa-solid fa-list mx-4"></i>Add New User Group</h2>
+  <div class="relative overflow-x-auto sm:rounded-lg w-3/4 h-screen bg-white">
+      <div class="w-full text-base text-left text-gray2">
+          <div class="text-lg text-gray2 uppercase dark:text-gray-400">
+              <div class="flex flex-col m-6 text-gray1">
+                  <!-- Group Name -->
+                  <label for="group_name" class="text-lg font-normal mb-2">Group Name:</label>
+                  <input type="text" id="group_name" name="group_name" placeholder="Group Name" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                  
+                  <!-- Group Level -->
+                  <label for="group_level" class="text-lg font-normal mb-2">Group Level:</label>
+                  <input type="number" min="0" pattern="0-9*" id="group_level" name="group_level" placeholder="Group Level" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
 
-<!--Total Sales-->
-<a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Sales</h5>
-  <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">₱ 1,290,000</p>
-  </a>
-<!-- Total Orders -->
-  <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Orders</h5>
-    <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">155</p>
-    </a>
-<!-- Total Products -->
-    <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Products</h5>
-      <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">102</p>
-      </a>
-<!-- Total Suppliers -->
-      <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Suppliers</h5>
-        <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">15</p>
-        </a>
-<!-- Total Revenue -->
-        <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Revenue</h5>
-          <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">₱ 1,290,000</p>
-          </a>
-<!-- Pending Orders -->
-          <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Pending Orders</h5>
-            <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">13</p>
-            </a>
-  </div>
-
-  
-  <!-- Monthly Sales Chart -->
-  <div class="grid grid-cols-2 gap-1 ml-[340px]">
-    <!-- Monthly Sales Chart -->
-    <div class="relative flex flex-col rounded-xl bg-white  hover:bg-gray-100 bg-clip-border text-gray-700 shadow-md max-w-3xl p-6 mr-8">
-      <div class="relative mx-4 mt-4">
-        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal text-gray1">
-          Monthly Sales
-        </h6>
+                  
+                  <!-- Status -->
+                  <label for="status" class="text-lg font-normal mb-2">Status:</label>
+                  <select id="status" name="status" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                      <option value="" selected disabled>Select Status</option>
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                  </select>
+                  
+                  <!-- Button -->
+                  <div class="flex justify-center mt-6">
+                      <button class="h-14 w-44 rounded-2xl px-4 py-3 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">Add User Group</button>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="pt-6 px-2 pb-0">
-        <div id="bar-chart"></div>
-      </div>
-    </div>
-  
-    <!-- Top Selling Products Chart -->
-    <div class="relative flex flex-col rounded-xl bg-white hover hover:bg-gray-100 bg-clip-border text-gray-700 shadow-md max-w-2xl p-6">
-      <div class="relative mx-4 mt-4">
-        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal text-gray1">
-          Top Selling Products
-        </h6>
-      </div>
-      <div class="py-6 mt-4 grid place-items-center px-2">
-        <div id="pie-chart"></div>
-      </div>
-    </div>
-  </div>
-
-
-<!-- Recent Activity - Inventory Updates -->
-<div class="ml-[340px] mt-10 bg-white rounded-lg shadow-md overflow-hidden ">
-  <div class="p-6">
-      <h3 class="text-2xl font-bold mb-4 text-gray1">Inventory Updates</h3>
-
-      <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
-        <li class="mb-10 ms-6">            
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-
-            </span>
-            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Facial Mask</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 10:20 AM</time>
-            <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+50 items</p>
-        </li>
-
-             <li class="mb-10 ms-6">            
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-            </span>
-            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flash Drive</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 8:50 AM</time>
-            <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+25 items</p>
-        </li>
-        <li class="mb-10 ms-6">            
-          <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-            <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-          </span>
-          <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Clip Fan <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 18, 2024 - 7:20 AM</time>
-          <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+30 items</p>
-      </li>
-        
-      <li class="mb-10 ms-6">            
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-          <i class="fa-solid fa-box text-red-800 text-xs"></i>
-        </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Scrunchie</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Removed on May 18, 2024 - 7:36 AM</time>
-        <p class="mb-4 text-base font-normal text-red-500 dark:text-gray-400">-5 items</p>
-    </li>
-    </ol>
-    
-    
   </div>
 </div>
 
- 
-
-
 
   
-
-
-
-
-
-
-
-
-
-
-        <!-- scripts -->
         <!-- sub menu -->
-        <script src="submenu.js"> </script>
-        <!-- charts -->
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="/src/submenu.js"> </script>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-<!-- Chart.js Scripts -->
+        
+        <script>
+          // Get the input element
+          const groupLevelInput = document.getElementById('group_level');
 
-<script src="/src/monthly-sales-chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
-<script src="/src/top-selling-products-chart.js"></script>
-
-
-
+          // Add event listener to the input element
+          groupLevelInput.addEventListener('input', function() {
+              // Remove any non-numeric characters from the input value
+              this.value = this.value.replace(/\D/g, '');
+          });
+      </script>
     </body>
 <html>

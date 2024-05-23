@@ -3,129 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistics SCM</title>
+    <title>Supplier Management</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-100 p-6">
 
     <!-- Container -->
     <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6">Logistics</h1>
+        <h1 class="text-3xl font-bold mb-6">Supplier Management</h1>
 
-        <!-- Shipment Tracking -->
+        <!-- Supplier List -->
         <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Shipment Tracking</h2>
+            <h2 class="text-2xl font-semibold mb-4">Supplier List</h2>
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <table class="w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Shipment ID</th>
-                            <th class="p-3">Status</th>
-                            <th class="p-3">Expected Delivery</th>
-                            <th class="p-3">Carrier</th>
-                            <th class="p-3">Tracking Number</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">12345</td>
-                            <td class="p-3 text-green-500">In Transit</td>
-                            <td class="p-3">May 20th, 2024</td>
-                            <td class="p-3">FedEx</td>
-                            <td class="p-3">1Z999AA10123456784</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">12346</td>
-                            <td class="p-3 text-blue-500">Delivered</td>
-                            <td class="p-3">May 18th, 2024</td>
-                            <td class="p-3">UPS</td>
-                            <td class="p-3">1Z999BB10123456785</td>
-                        </tr>
-                        <!-- Add more shipments as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Warehouse Management -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Warehouse Management</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Warehouse</th>
+                            <th class="p-3">Supplier Name</th>
+                            <th class="p-3">Contact Information</th>
                             <th class="p-3">Location</th>
-                            <th class="p-3">Inventory Levels</th>
-                            <th class="p-3">Space Utilization</th>
+                            <th class="p-3">Primary Contact</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-b">
-                            <td class="p-3">Warehouse A</td>
-                            <td class="p-3">New York</td>
-                            <td class="p-3">5000 units</td>
-                            <td class="p-3">75%</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3">Warehouse B</td>
-                            <td class="p-3">Los Angeles</td>
-                            <td class="p-3">3000 units</td>
-                            <td class="p-3">60%</td>
-                        </tr>
-                        <!-- Add more warehouses as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Order Fulfillment -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Order Fulfillment</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <table class="w-full table-auto">
-                    <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Order ID</th>
-                            <th class="p-3">Status</th>
-                            <th class="p-3">Customer</th>
-                            <th class="p-3">Order Date</th>
-                            <th class="p-3">Expected Shipment Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">54321</td>
-                            <td class="p-3 text-yellow-500">Picking</td>
+                            <td class="p-3">Supplier X</td>
+                            <td class="p-3">supplierx@example.com<br>(123) 456-7890</td>
+                            <td class="p-3">New York, USA</td>
                             <td class="p-3">John Doe</td>
-                            <td class="p-3">May 17th, 2024</td>
-                            <td class="p-3">May 19th, 2024</td>
                         </tr>
                         <tr class="border-b">
-                            <td class="p-3">54322</td>
-                            <td class="p-3 text-green-500">Shipped</td>
+                            <td class="p-3">Supplier Y</td>
+                            <td class="p-3">suppliery@example.com<br>(987) 654-3210</td>
+                            <td class="p-3">Los Angeles, USA</td>
                             <td class="p-3">Jane Smith</td>
-                            <td class="p-3">May 16th, 2024</td>
-                            <td class="p-3">May 18th, 2024</td>
                         </tr>
-                        <!-- Add more orders as needed -->
+                        <!-- Add more suppliers as needed -->
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Supplier Management -->
+        <!-- Delivery Schedule -->
         <div class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Supplier Management</h2>
+            <h2 class="text-2xl font-semibold mb-4">Delivery Schedule</h2>
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <table class="w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-left">
-                            <th class="p-3">Supplier</th>
+                            <th class="p-3">Supplier Name</th>
                             <th class="p-3">Next Delivery Date</th>
                             <th class="p-3">Last Delivery Date</th>
-                            <th class="p-3">Contact</th>
+                            <th class="p-3">Delivery Frequency</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,20 +62,115 @@
                             <td class="p-3">Supplier X</td>
                             <td class="p-3">May 21st, 2024</td>
                             <td class="p-3">April 20th, 2024</td>
-                            <td class="p-3">supplierx@example.com</td>
+                            <td class="p-3">Monthly</td>
                         </tr>
                         <tr class="border-b">
                             <td class="p-3">Supplier Y</td>
                             <td class="p-3">May 22nd, 2024</td>
                             <td class="p-3">April 22nd, 2024</td>
-                            <td class="p-3">suppliery@example.com</td>
+                            <td class="p-3">Weekly</td>
                         </tr>
-                        <!-- Add more suppliers as needed -->
+                        <!-- Add more deliveries as needed -->
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
 
-</body>
-</html>
+        <!-- Performance Metrics -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Performance Metrics</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-3">Supplier Name</th>
+                            <th class="p-3">On-Time Delivery Rate</th>
+                            <th class="p-3">Quality Rating</th>
+                            <th class="p-3">Average Delivery Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-3">Supplier X</td>
+                            <td class="p-3">95%</td>
+                            <td class="p-3">4.5/5</td>
+                            <td class="p-3">5 days</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3">Supplier Y</td>
+                            <td class="p-3">90%</td>
+                            <td class="p-3">4.0/5</td>
+                            <td class="p-3">7 days</td>
+                        </tr>
+                        <!-- Add more metrics as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Orders and Invoices -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Orders and Invoices</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-3">Supplier Name</th>
+                            <th class="p-3">Order ID</th>
+                            <th class="p-3">Order Date</th>
+                            <th class="p-3">Amount</th>
+                            <th class="p-3">Invoice Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-3">Supplier X</td>
+                            <td class="p-3">#78901</td>
+                            <td class="p-3">April 15th, 2024</td>
+                            <td class="p-3">$5000</td>
+                            <td class="p-3 text-green-500">Paid</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3">Supplier Y</td>
+                            <td class="p-3">#78902</td>
+                            <td class="p-3">April 10th, 2024</td>
+                            <td class="p-3">$3000</td>
+                            <td class="p-3 text-yellow-500">Pending</td>
+                        </tr>
+                        <!-- Add more orders and invoices as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Communication Logs -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Communication Logs</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <ul class="list-disc list-inside">
+                    <li>
+                        <span class="font-semibold">Supplier X:</span> Discussed upcoming order on April 20th, 2024.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Supplier Y:</span> Follow-up on delayed delivery on April 22nd, 2024.
+                    </li>
+                    <!-- Add more communication logs as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contracts and Agreements -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Contracts and Agreements</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-3">Supplier Name</th>
+                            <th class="p-3">Contract Start Date</th>
+                            <th class="p-3">Contract End Date</th>
+                            <th class="p-3">Renewal Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
