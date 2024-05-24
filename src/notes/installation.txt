@@ -1,0 +1,18 @@
+1. Install Node.js:
+   - Go to https://nodejs.org/en and install Node.js.
+2. Open VS Code:
+3. Open the terminal in VS Code:
+4. Install Tailwind via VS Code terminal:
+   - Run the following commands in the terminal:
+     ```
+     npm init
+     npm init -y
+     npm install -D tailwindcss
+     npx tailwindcss init
+     ```
+5. Install additional Libraries:
+   - Run the following commands in the terminal:
+     ```
+     npm install flowbite
+     npm install tw-elements
+     ```
