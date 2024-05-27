@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=
-  , initial-scale=1.0">
+  <meta name="viewport" content="width=device,initial-scale=1.0">
+  <script src="auth.js" defer type="module"></script> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="login.php">
     <title>Login</title>
+   
 </head>
 <body>
 
@@ -51,7 +52,7 @@
                                 </h4>
                               </div> -->
                            
-                              <form class="bg-white1 m-16 px-20" action="login.php" method="post">
+                              <form action="link_login.php" method="post" id="loginForm" class="bg-white1 m-16 px-20">
                                 <h1 class="mb-0 text-3xl font-semibold ">Log in to your Account</h1>
                                 <p class="text-sm mb-6">See whats going on with your business</p>
                                 <!-- sign in with google -->
@@ -75,26 +76,26 @@
                                 <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
                             </div>
                                
-                        <!-- Email ID input -->
-                        <div class="mb-4">
-                          <input type="text" id="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-pami" id="exampleFormControlInput1" placeholder="Email ID" />
-                    
+             <!-- Email ID input -->
+                      <div class="mb-4">
+                        <input type="email" id="email" name="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-pami" placeholder="Email ID" />
                       </div>
                       <!-- Password input -->
                       <div class="mb-4">
-                          <input type="password" id="password" class="w-full rounded-md border bg-neuteal-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-pami" placeholder="Password" />
+                        <input type="password" id="password" name="password" class="w-full rounded-md border bg-neuteal-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-pami" placeholder="Password" />
                       </div>
                       <!-- Submit button -->
-                      <div class="mb-4 text-center"> <br><br>
-                        <a href="dashboard.html">
-                          <button class="h-12 w-64 rounded-2xl px-2 py- md:py-3 text-xl font-bold uppercase text-white border-5 border-pami bg-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="loginbtn">
-                              Log in
-                          </button> </a>
-                          <!-- Forgot password link -->
-                          <a href="#!" class="text-pami"> <br> <br> Forgot password?</a>
+                      <div class=" text-center">
+                        <br><br>
+                      
+                        <button class="h-12 w-64 rounded-2xl px-2 py-2 md:py-3 text-xl font-bold uppercase text-white border-5 border-pami bg-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="submit" id="loginbtn" onclick="login()">
+                            Log in
+                        </button> 
+                        <!-- Forgot password link -->
+                        <div class="mb-4" ><a href="#!" class="text-pami"> <br> Forgot password?</a>
+                        </div>
                       </div>
-                    </form>
-                         
+                    </form> 
                             </div>
                           </div>
                         </div>
@@ -103,8 +104,43 @@
                   </div>
                 </div>
               </section>
-  <script
-  type="text/javascript"
-  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+              <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>  
+              <script>
+          document.getElementById('loginForm').addEventListener('submit', function(event) {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            
+            if (!email.trim() && !password.trim()) {
+                event.preventDefault(); // Prevent form submission
+                alert("Email and password are required."); // Display alert message
+                return false;
+            } else if (!email.trim()) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please enter your email."); // Display alert message
+                return false;
+            } else if (!isValidEmail) {
+                event.preventDefault(); // Prevent form submission
+                alert("Invalid email address. Please include '@' in the email."); // Display alert message
+                return false;
+            } else if (!password.trim()) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please enter your password."); // Display alert message
+                return false;
+            }
+        });
+    </script>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+
+          if (!email.trim() || !password.trim()) {
+              event.preventDefault(); // Prevent form submission
+              alert("Email and password are required."); // Display alert message
+              return false;
+          }
+      });
+  </script>
 </body>
 </html>

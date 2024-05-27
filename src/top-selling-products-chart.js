@@ -39,10 +39,10 @@ const pieChartConfig = {
       formatter: function(value, { seriesIndex, dataPointIndex, w }) {
         // Define products and their corresponding percentages
         const products = [
-          { name: 'Teddy Bear', percentage: 35 },
+          { name: 'Flash Drive', percentage: 35 },
+          { name: 'Teddy Bear', percentage: 20 },
           { name: 'Facial Mask', percentage: 20 },
-          { name: 'Flash Drive', percentage: 20 },
-          { name: 'Pan', percentage: 15 },
+          { name: 'Ribbon Hair Clip', percentage: 15 },
           { name: 'Washi Tape', percentage: 10 }
         ];
         // Return the product name and its percentage

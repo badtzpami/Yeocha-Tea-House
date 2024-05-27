@@ -1292,11 +1292,6 @@ input:checked + .toggle-bg {
   margin-right: 5rem;
 }
 
-.mx-32 {
-  margin-left: 8rem;
-  margin-right: 8rem;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -1354,10 +1349,6 @@ input:checked + .toggle-bg {
 
 .mb-20 {
   margin-bottom: 5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -1428,16 +1419,8 @@ input:checked + .toggle-bg {
   margin-top: 2.5rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .mt-4 {
@@ -1512,10 +1495,6 @@ input:checked + .toggle-bg {
   height: 1.5rem;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
 .h-9 {
   height: 2.25rem;
 }
@@ -1540,6 +1519,10 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -1562,10 +1545,6 @@ input:checked + .toggle-bg {
 
 .w-3\/4 {
   width: 75%;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .w-4 {
@@ -1620,12 +1599,20 @@ input:checked + .toggle-bg {
   width: 100vw;
 }
 
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
 }
 
 .max-w-\[200px\] {
@@ -1767,16 +1754,8 @@ input:checked + .toggle-bg {
   resize: both;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -1833,14 +1812,6 @@ input:checked + .toggle-bg {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2078,11 +2049,6 @@ input:checked + .toggle-bg {
   background-color: rgb(225 239 254 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
-}
-
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -2117,11 +2083,6 @@ input:checked + .toggle-bg {
   background-color: rgb(166 171 200 / var(--tw-bg-opacity));
 }
 
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
-}
-
 .bg-pami {
   --tw-bg-opacity: 1;
   background-color: rgb(90 103 186 / var(--tw-bg-opacity));
@@ -2130,11 +2091,6 @@ input:checked + .toggle-bg {
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 232 232 / var(--tw-bg-opacity));
-}
-
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 213 213 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -2205,11 +2161,6 @@ input:checked + .toggle-bg {
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
-}
-
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 
 .px-3 {
@@ -2502,10 +2453,6 @@ input:checked + .toggle-bg {
   line-height: 1.625;
 }
 
-.leading-tight {
-  line-height: 1.25;
-}
-
 .tracking-normal {
   letter-spacing: 0em;
 }
@@ -2647,11 +2594,6 @@ input:checked + .toggle-bg {
 .text-white1 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-yellow-500 {
-  --tw-text-opacity: 1;
-  color: rgb(194 120 3 / var(--tw-text-opacity));
 }
 
 .text-yellow-600 {
@@ -2863,11 +2805,6 @@ input:checked + .toggle-bg {
   background-color: rgb(32 64 117 / var(--tw-bg-opacity)) !important;
 }
 
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
@@ -2881,11 +2818,6 @@ input:checked + .toggle-bg {
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(4 108 78 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-white:hover {
@@ -3274,10 +3206,6 @@ input:checked + .toggle-bg {
 
   .md\:w-96 {
     width: 24rem;
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:p-12 {

@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
   <link rel="stylesheet" href="output.css">
     </head>
@@ -61,7 +61,7 @@
               <i class="fa-solid fa-chart-column text-2xl"></i>
               <div>
                 <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                  <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  <a href="dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                     Dashboard
                   </a>
                 </span>
@@ -72,7 +72,7 @@
               <i class="fa-solid fa-list text-2xl"></i>
               <div>
                 <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                  <a href="/src/categories.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  <a href="categories.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                     Categories
                   </a>
                 </span>
@@ -192,42 +192,44 @@
 <!-- Dashboard -->
 <h5 class="ml-[340px] mt-10 text-4xl font-bold text-gray1 dark:text-white">Overview</h5>
 
-<div class="bg-white ml-96 p-8 items-center grid grid-cols-3">
+<div class="bg-white ml-96 p-8 items-center grid grid-cols-2">
 
 <!--Total Sales-->
-<a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+<a href="sales.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Sales</h5>
-  <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">₱ 1,290,000</p>
+  <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">₱ 54,400</p>
   </a>
-<!-- Total Orders -->
-  <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Orders</h5>
-    <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">155</p>
-    </a>
 <!-- Total Products -->
-    <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+    <a href="manage-products.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
 
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Products</h5>
-      <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">102</p>
+      <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">10</p>
       </a>
+
+  <!-- Total Categories -->
+  <a href="categories.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Categories</h5>
+    <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">10</p>
+    </a>
 <!-- Total Suppliers -->
-      <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+      <a href="view-supplier.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
 
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Suppliers</h5>
-        <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">15</p>
+        <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">3</p>
         </a>
-<!-- Total Revenue -->
-        <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
 
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Revenue</h5>
-          <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">₱ 1,290,000</p>
-          </a>
-<!-- Pending Orders -->
-          <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+        <!-- Total Orders -->
+        <!-- <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Orders</h5>
+          <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">155</p>
+          </a> -->
 
+        <!-- Pending Orders -->
+        <!-- <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Pending Orders</h5>
             <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">13</p>
-            </a>
+            </a> -->
   </div>
 
   
@@ -301,26 +303,8 @@
         <p class="mb-4 text-base font-normal text-red-500 dark:text-gray-400">-5 items</p>
     </li>
     </ol>
-    
-    
   </div>
 </div>
-
- 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
         <!-- scripts -->
         <!-- sub menu -->
         <script src="submenu.js"> </script>
@@ -328,13 +312,8 @@
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <!-- Chart.js Scripts -->
-
 <script src="/src/monthly-sales-chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
 <script src="/src/top-selling-products-chart.js"></script>
-
-
-
     </body>
 <html>
