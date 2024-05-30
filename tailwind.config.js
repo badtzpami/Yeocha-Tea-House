@@ -1,18 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js,php}",
+    "./src/**/*.{html,js,php,firebase}",
     "./node_modules/tw-elements/js/**/*.js",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    "./path/to/firebase.css", // Include Firebase CSS file
   ],
   theme: {
     colors: {
-      'pami': '#5A67BA',
+      'pami': '#CCAB35',
       'white1': '#ffffff',
       'white2': '#F1F2F7',
       'gray1': '#676565',
       'gray2': '#082431',
       'gray3': '#A6ABC8',
+      'gray4': "#EEEEEE",
+      
     },
   },
   plugins: [

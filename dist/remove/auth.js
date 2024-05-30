@@ -1,13 +1,15 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgTQHJdXv7HTfX7vVSavAmJMVVt92Pcbs",
-  authDomain: "vams-web.firebaseapp.com",
-  projectId: "vams-web",
-  storageBucket: "vams-web.appspot.com",
-  messagingSenderId: "711764254531",
-  appId: "1:711764254531:web:08d45912fee45503e8d9f6"
+  apiKey: "AIzaSyCgkvx0dFvMt2-5w-wYwytX4lA_mDrYTao",
+  authDomain: "vams-website.firebaseapp.com",
+  projectId: "vams-website",
+  storageBucket: "vams-website.appspot.com",
+  messagingSenderId: "285065276814",
+  appId: "1:285065276814:web:c637c011cf2ad3566e08df"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -29,7 +31,6 @@ if (email && password) {
       // Signed in
       const user = userCredential.user;
       console.log('Sign-in successful:', user);
-      console.log('Signed in with email:', email);
       alert('Sign-in successful!');
       // Redirect to another page if needed
       window.location.href = "dashboard.html"; // Change to your dashboard URL
@@ -57,26 +58,5 @@ onAuthStateChanged(auth, (user) => {
     if (!window.location.pathname.endsWith('/login.html')) {
       window.location.href = "login.html"; // Change to your login page URL
     }
-  }
-});
-
-// Log out functionality
-document.addEventListener('DOMContentLoaded', () => {
-  const logoutButton = document.getElementById('logoutButton');
-
-  if (logoutButton) {
-    logoutButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      signOut(auth)
-        .then(() => {
-          console.log('User signed out.');
-          alert('You have been logged out.');
-          window.location.href = "login.html";
-        })
-        .catch((error) => {
-          console.error('Error signing out:', error);
-          alert('Error signing out. Please try again.');
-        });
-    });
   }
 });

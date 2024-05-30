@@ -135,17 +135,6 @@
   <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
 </div>   
 
- <!-- menu item: Logistics -->
-        <div class="flex items-center px-4">
-            <i class="fa-solid fa-truck text-2xl"></i>
-              <div>
-                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                  <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                        Logistics
-                      </a>
-                    </span>
-                  </div>  
-                </div>
 <!-- Others Section-->
             <div class="block pt-5 pb-[.15rem]">
                 <div class="px-4 py-[.65rem]">
@@ -177,7 +166,7 @@
             <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
             <div>
               <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="/src/login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                   Log out
                 </a>
               </span>
@@ -190,7 +179,7 @@
 
 
 <!-- Dashboard -->
-<h5 class="ml-[340px] mt-10 text-4xl font-bold text-gray1 dark:text-white">Overview</h5>
+<h5 class="ml-[340px] mt-10 text-4xl font-bold  text-gray-600  dark:text-white">Overview</h5>
 
 <div class="bg-white ml-96 p-8 items-center grid grid-cols-2">
 
@@ -238,7 +227,7 @@
     <!-- Monthly Sales Chart -->
     <div class="relative flex flex-col rounded-xl bg-white  hover:bg-gray-100 bg-clip-border text-gray-700 shadow-md max-w-3xl p-6 mr-8">
       <div class="relative mx-4 mt-4">
-        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal text-gray1">
+        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal  text-gray-600 ">
           Monthly Sales
         </h6>
       </div>
@@ -250,7 +239,7 @@
     <!-- Top Selling Products Chart -->
     <div class="relative flex flex-col rounded-xl bg-white hover hover:bg-gray-100 bg-clip-border text-gray-700 shadow-md max-w-2xl p-6">
       <div class="relative mx-4 mt-4">
-        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal text-gray1">
+        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal  text-gray-600 ">
           Top Selling Products
         </h6>
       </div>
@@ -264,7 +253,7 @@
 <!-- Recent Activity - Inventory Updates -->
 <div class="ml-[340px] mt-10 bg-white rounded-lg shadow-md overflow-hidden ">
   <div class="p-6">
-      <h3 class="text-2xl font-bold mb-4 text-gray1">Inventory Updates</h3>
+      <h3 class="text-2xl font-bold mb-4  text-gray-600">Inventory Updates</h3>
 
       <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
         <li class="mb-10 ms-6">            
@@ -315,5 +304,8 @@
 <script src="/src/monthly-sales-chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="/src/top-selling-products-chart.js"></script>
+<script src="auth.js" defer type="module"></script>
+
+
     </body>
 <html>

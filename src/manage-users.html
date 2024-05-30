@@ -131,17 +131,7 @@
         <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
         <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
         </div>    
-    <!-- menu item: Logistics -->
-    <div class="flex items-center px-4">
-      <i class="fa-solid fa-truck text-2xl"></i>
-        <div>
-          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-            <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                  Logistics
-                </a>
-              </span>
-            </div>  
-          </div>
+
       <!-- Others Section-->
         <div class="block pt-5 pb-[.15rem]">
             <div class="px-4 py-[.65rem]">
@@ -169,7 +159,7 @@
         <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
         <div>
           <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-            <a href="login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+            <a href="" id="logoutButton"  class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
               Log out
             </a>
           </span>
@@ -184,16 +174,16 @@
 <div class="grid gap-4 ml-96">
   <!-- Right column -->
   <div class="bg-white1 p-4 mx-20 mt-10">
-    <h2 class="text-pami text-2xl font-bold"> <i class="fa-solid fa-list mx-4 pt-4 pb-4"></i>Manage User</h2>
+    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 pt-4 pb-4"></i>Manage User</h2>
 <!-- Button -->
 <a href="/src/add-new-user.html">
 <div class="flex items-end justify-end mb-4">
-    <button class="h-12 w-40 m-2 rounded-2xl px-2 py-3 text-lg font-semibold text-white border-5 border-pami bg-pami hover:border hover:border-pami  hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
+    <button class="h-12 w-40 m-2 rounded-2xl px-2 py-3 text-lg font-medium text-white border-5 border-gray-600 bg-gray-600 hover:border hover:border-gray-600  hover:bg-white1 hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
 ADD NEW </button> </div></a>
 <!-- Table -->
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-base text-center text-gray1 ">
-          <thead class="text-base uppercase bg-pami text-white1">
+          <thead class="text-base uppercase bg-gray-600 text-white1">
               <tr>
                   <th scope="col" class="px-6 py-3">
                     #
@@ -239,8 +229,8 @@ ADD NEW </button> </div></a>
                     May 21, 2024 - 7:06 AM
                     </td>
                   <td class="px-6 py-4"> 
-                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                    <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
                   </td>
               </tr>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -263,8 +253,8 @@ ADD NEW </button> </div></a>
                   May 22, 2024 - 12:06 AM
                   </td>
                 <td class="px-6 py-4"> 
-                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
-                  <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+                  <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
                 </td>
             </tr>             
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -287,9 +277,8 @@ ADD NEW </button> </div></a>
                 May 21, 2024 - 9:35 AM
                 </td>
               <td class="px-6 py-4"> 
-                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
-              </td>
+                <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -311,8 +300,8 @@ ADD NEW </button> </div></a>
               April 23, 2024 - 1:06 pM
               </td>
             <td class="px-6 py-4"> 
-              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
-              <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+              <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+              <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
             </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -335,8 +324,8 @@ ADD NEW </button> </div></a>
             April 21, 2024 - 10:06 PM
             </td>
           <td class="px-6 py-4"> 
-            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami"><i class="fa-solid fa-trash-can"></i></a>
-            <a href="#" class="font-medium text-gray1 dark:text-blue-500 hover:text-pami mx-4"><i class="fa-solid fa-edit"></i></a>
+            <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+            <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
           </td>
       </tr>                       
           </tbody>
@@ -349,5 +338,8 @@ ADD NEW </button> </div></a>
         <script src="submenu.js"> </script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script src="auth.js" defer type="module"></script>
+
+
     </body>
 <html>

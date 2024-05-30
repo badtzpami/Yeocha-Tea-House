@@ -131,17 +131,6 @@
   <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
   </div>   
 
-<!-- menu item: Logistics -->
-      <div class="flex items-center px-4">
-          <i class="fa-solid fa-truck text-2xl"></i>
-            <div>
-              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                      Logistics
-                    </a>
-                  </span>
-                </div>  
-              </div>
 <!-- Others Section-->
           <div class="block pt-5 pb-[.15rem]">
               <div class="px-4 py-[.65rem]">
@@ -173,7 +162,7 @@
           <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
           <div>
             <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-              <a href="/src/login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                 Log out
               </a>
             </span>
@@ -186,26 +175,26 @@
 
 
         <div class="container mx-auto my-20 px-96 bg-white rounded-lg  ml-96">
-          <h2 class="text-pami text-2xl font-bold mb-6"><i class="fa-solid fa-list mx-4"></i>Add New User</h2>
+          <h2 class="text-gray-600 text-2xl font-bold mb-6"><i class="fa-solid fa-list mx-4"></i>Add New User</h2>
           <div class="relative overflow-x-auto sm:rounded-lg w-3/4 bg-white">
               <div class="w-full text-base text-left text-gray2">
                   <div class="text-lg text-gray2 uppercase  dark:bg-gray-700 dark:text-gray-400">
                       <div class="flex flex-col m-6 text-gray1">
                           <!-- Name -->
                           <label for="name" class="text-lg font-normal mb-2">Name:</label>
-                          <input type="text" id="name" name="name" placeholder="Full Name" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <input type="text" id="name" name="name" placeholder="Full Name" class="w-full md:w-96 px-4 py-3 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
                           
                           <!-- Username -->
                           <label for="username" class="text-lg font-normal mb-2">Username:</label>
-                          <input type="text" id="username" name="username" placeholder="Username" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <input type="text" id="username" name="username" placeholder="Username" class="w-full md:w-96 px-4 py-3 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
                           
                           <!-- Password -->
                           <label for="password" class="text-lg font-normal mb-2">Password:</label>
-                          <input type="password" id="password" name="password" placeholder="Password" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <input type="password" id="password" name="password" placeholder="Password" class="w-full md:w-96 px-4 py-3 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
                           
                           <!-- User Roles -->
                           <label for="user_role" class="text-lg font-normal mb-2">User Roles:</label>
-                          <select id="user_role" name="user_role" class="w-full md:w-96 px-4 py-3 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                          <select id="user_role" name="user_role" class="w-full md:w-96 px-4 py-3 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
                               <option value="" selected disabled>Select User Role</option>
                               <option value="admin">Admin</option>
                               <option value="manager">Manager</option>
@@ -213,7 +202,7 @@
                           
                           <!-- Button -->
                           <div class="flex justify-center mt-6">
-                              <button class="h-14 w-44 rounded-2xl px-4 py-3 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">Add User</button>
+                              <button class="h-14 w-44 rounded-2xl px-4 py-3 text-base font-medium text-white border-5 border-gray-600 bg-gray-600 hover:border hover:border-gray-600 hover:bg-white1 hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">Add User</button>
                           </div>
                       </div>
                   </div>
@@ -225,8 +214,9 @@
         <!-- sub menu -->
         <script src="/src/submenu.js"> </script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  
+        <script src="auth.js" defer type="module"></script>
+
+
     </body>
 <html>

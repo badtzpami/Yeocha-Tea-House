@@ -127,18 +127,7 @@
           <div id="supplierSubMenu" class="hidden ml-10">
             <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
             <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
-            </div>    
-        <!-- menu item: Logistics -->
-        <div class="flex items-center px-4">
-          <i class="fa-solid fa-truck text-2xl"></i>
-            <div>
-              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="/src/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                      Logistics
-                    </a>
-                  </span>
-                </div>  
-              </div>
+            </div>   
           <!-- Others Section-->
             <div class="block pt-5 pb-[.15rem]">
                 <div class="px-4 py-[.65rem]">
@@ -166,7 +155,7 @@
             <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
             <div>
               <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="login.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                   Log out
                 </a>
               </span>
@@ -181,7 +170,7 @@
 
 <!-- Manage Products -->
           <div class="bg-white ml-[450px] p-8 ">
-            <h2 class="text-pami text-2xl font-bold"> <i class="fa-solid fa-list mx-4 py-10 "></i>Add New Product</h2>
+            <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 py-10 "></i>Add New Product</h2>
 
             <div class="relative overflow-x-auto  sm:rounded-lg  w-3/4 h-screen bg-white">
               <table class="w-full text-base text-left rtl:text-right text-gray2 ">
@@ -189,14 +178,14 @@
 
                     <div class="flex flex-col m-6 text-gray1">
                       <!-- Input field -->
-                      <input type="text" placeholder="Product Name" class="w-96 px-4 py-4 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+                      <input type="text" placeholder="Product Name" class="w-96 px-4 py-4 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
                       
   <!-- Dropdown menu -->
   <div class="flex">
     <div class="">
       <form class="max-w-sm mx-auto">
         <label for="underline_select" class="sr-only">Underline select</label>
-        <select id="underline_select" class="w-96 px-4 py-4 mr-6 mb-4 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+        <select id="underline_select" class="w-96 px-4 py-4 mr-6 mb-4 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
             <option selected>Select Product Category</option>
             <option value="#">Accessories</option>
             <option value="#">Apparel</option>
@@ -215,8 +204,8 @@
 
      <div class="">
       <label for="uploadFile1" 
-             class="flex bg-pami hover:bg-white hover:text-pami text-white hover:border hover:border-pami text-gray text-base px-4 py-4 outline-none rounded border border-pami focus:border-pami w-96 cursor-pointer mx-auto font-[sans-serif]">
-          <i class="fas fa-cloud-arrow-up text-white hover:text-pami py-1 pr-3"></i>
+             class="flex bg-gray-600 hover:bg-white hover:text-gray-600 text-white hover:border hover:border-gray-600 text-gray text-base px-4 py-4 outline-none rounded border border-gray-600 focus:border-gray-600 w-96 cursor-pointer mx-auto font-[sans-serif]">
+          <i class="fas fa-cloud-arrow-up text-white hover:text-gray-600 py-1 pr-3"></i>
           Select Product Photo
       </label>
       <input type="file" id="uploadFile1" class="hidden"/>
@@ -231,7 +220,7 @@
     <span class="absolute inset-y-0 left-0 flex items-center pl-3">
       <i class="fas fa-cart-plus text-gray-400 pb-4"></i>
     </span>
-    <input type="number" id="productQuantity" min="0" pattern="0-9*" placeholder="Product Quantity" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+    <input type="number" id="productQuantity" min="0" pattern="0-9*" placeholder="Product Quantity" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
   </div>
 </div>
 
@@ -240,7 +229,7 @@
     <span class="absolute inset-y-0 left-0 flex items-center pl-4">
       <i class="fas fa-peso-sign text-gray-400 pb-4"></i>
     </span>
-    <input type="number" id="buyingPrice" min="0" pattern="0-9*" placeholder="Buying Price" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+    <input type="number" id="buyingPrice" min="0" pattern="0-9*" placeholder="Buying Price" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
   </div> 
 </div>
 
@@ -249,7 +238,7 @@
     <span class="absolute inset-y-0 left-0 flex items-center pl-4">
       <i class="fas fa-peso-sign text-gray-400 pb-4"></i>
     </span>
-    <input type="number" id="sellingPrice" min="0" pattern="0-9*" placeholder="Selling Price" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-pami rounded-md focus:outline-none focus:ring focus:border-pami">
+    <input type="number" id="sellingPrice" min="0" pattern="0-9*" placeholder="Selling Price" class="pl-10 pr-4 py-4 mb-4 mr-6 border border-gray-600 rounded-md focus:outline-none focus:ring focus:border-gray-600">
   </div> 
 </div>
 </div>
@@ -261,7 +250,7 @@
  
                   
                       <!-- Button -->
-                      <button class="h-14 w-44 rounded-2xl px-2 py- md:py-3 text-base font-medium text-white border-5 border-pami bg-pami hover:border hover:border-pami  hover:bg-white1 hover:text-pami shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
+                      <button class="h-14 w-44 rounded-2xl px-2 py- md:py-3 text-base font-medium text-white border-5 border-pami bg-gray-600 hover:border hover:border-gray-600  hover:bg-white1 hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
                         Add Category
                     </button> </a>
                     </div>
@@ -276,8 +265,10 @@
         <!-- sub menu -->
         <script src="/src/submenu.js"> </script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script src="auth.js" defer type="module"></script>
+
+
 
 
         <script>
