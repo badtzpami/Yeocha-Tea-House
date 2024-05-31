@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manage Products</title>
+  <title>Manage User</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -76,7 +76,25 @@
             </span>
           </div>  
         </div>
-   
+        <!-- Menu item : Reports -->
+        <div class="flex items-center px-4">
+          <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+          <div>
+            <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+              <a href="rerp" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                Reports
+              </a>
+            </span>
+          </div>  
+          <div>
+            <!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
+          </div>
+        </div>
+        <!-- <div id="reportsSubMenu" class="hidden ml-10">
+          <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+          <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+          <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+        </div> -->
         <!-- Menu item : Products -->
         <div class="flex items-center px-4">
           <i class="fa-solid fa-tag text-2xl"></i>
@@ -112,26 +130,8 @@
       <div id="supplierSubMenu" class="hidden ml-10">
         <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
         <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
-        </div>  
-             <!-- Menu item : Reports -->
-             <div class="flex items-center px-4">
-              <i class="fa-solid fa-circle-exclamation text-2xl"></i>
-              <div>
-                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
-                  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                    Reports
-                  </a>
-                </span>
-              </div>  
-              <div>
-                <!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
-              </div>
-            </div>
-            <!-- <div id="reportsSubMenu" class="hidden ml-10">
-              <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
-              <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
-              <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
-            </div> -->  
+        </div>    
+
       <!-- Others Section-->
         <div class="block pt-5 pb-[.15rem]">
             <div class="px-4 py-[.65rem]">
@@ -143,7 +143,7 @@
         <i class="fa-solid fa-user text-2xl"></i>
         <div>
           <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
-            <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+            <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
               Accounts
             </a>
           </span>
@@ -159,7 +159,7 @@
         <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
         <div>
           <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-            <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+            <a href="" id="logoutButton"  class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
               Log out
             </a>
           </span>
@@ -170,21 +170,16 @@
     </aside>
     </div>
 
-
 <!-- Categories -->
 <div class="grid gap-4 ml-96">
-  
-  
-  <!--  column -->
+  <!-- Right column -->
   <div class="bg-white1 p-4 mx-20 mt-10">
-    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 pt-4 pb-4"></i>Manage Products</h2>
-
+    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 pt-4 pb-4"></i>Manage User</h2>
 <!-- Button -->
-<a href="/src/add-products.html">
+<a href="/src/add-new-user.html">
 <div class="flex items-end justify-end mb-4">
-
-    <button class="h-12 w-40 m-2 rounded-2xl px-2 py-3 text-lg font-medium text-white border-5 border-gray-600 bg-gray-600 hover:border hover:border-gray-600  hover:bg-white hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button" id="categorybtn">
-ADD NEW  </button> </div></a>
+    <button class="h-12 w-40 m-2 rounded-2xl px-2 py-3 text-lg font-medium text-white border-5 border-gray-600 bg-gray-600 hover:border hover:border-gray-600  hover:bg-white1 hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
+ADD NEW </button> </div></a>
 <!-- Table -->
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-base text-center text-gray1 ">
@@ -194,23 +189,20 @@ ADD NEW  </button> </div></a>
                     #
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    Photo
+                    Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    Product Title
+                    User Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                  Categories
+                 User Role
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    In-stock
+                   Status
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    Buying Price
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Selling Price
-                  </th>
+                    Last Login
+                     </th>
                   <th scope="col" class="px-6 py-3">
                     Actions
                   </th>
@@ -221,29 +213,24 @@ ADD NEW  </button> </div></a>
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                       1
                   </th>
-                  <td class="px-6 py-4 mx-2">
-                    <div >
-                      <img src="/src/img/charger.jpg" class="h-28 flex justify-center items-center" alt="Flash Drive">
-                    </div>
+                  <td class="px-6 py-4">
+                  Peter Parker
                   </td>
                   <td class="px-6 py-4">
-                  Charger
+                  peterparker
                   </td>
                   <td class="px-6 py-4">
-                    Electronics
+                    User
+                    </td>
+                  <td class="px-6 py-4 text-green-600">
+                    Active
                   </td>
                   <td class="px-6 py-4">
-                    32
-                  </td>
-                  <td class="px-6 py-4">
-                    200
-                  </td>
-                  <td class="px-6 py-4">
-                    300
-                  </td>
+                    May 21, 2024 - 7:06 AM
+                    </td>
                   <td class="px-6 py-4"> 
                     <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
+                  <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
                   </td>
               </tr>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -251,85 +238,70 @@ ADD NEW  </button> </div></a>
                     2
                 </th>
                 <td class="px-6 py-4">
-                  <div >
-                    <img src="/src/img/teddy bear.jpg" class="h-28 flex justify-center items-center" alt="Teddy Bear">
-                  </div>                </td>
-                <td class="px-6 py-4">
-                  Teddy Bear
+                Elon Musk
                 </td>
                 <td class="px-6 py-4">
-                  Toys and Games
+                ekonmusk
                 </td>
                 <td class="px-6 py-4">
-                  12
+                Admin
+                  </td>
+                <td class="px-6 py-4 text-green-600">
+                  Active
                 </td>
                 <td class="px-6 py-4">
-                  150
-                </td>
-                <td class="px-6 py-4">
-                  200
-                </td>
+                  May 22, 2024 - 12:06 AM
+                  </td>
                 <td class="px-6 py-4"> 
                   <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-                  <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
+                  <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
                 </td>
-            </tr>
+            </tr>             
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                   3
               </th>
               <td class="px-6 py-4">
-                <div >
-                  <img src="/src/img/facial mask.jpg" class="h-28 flex justify-center items-center" alt=" Facial Mask">
-                </div>
+              Eren Yeager 
               </td>
               <td class="px-6 py-4">
-                Facial Mask
+              erenyeager
               </td>
               <td class="px-6 py-4">
-                Health and Wellness 
+              Manager
+                </td>
+              <td class="px-6 py-4 text-green-600">
+                Active
               </td>
               <td class="px-6 py-4">
-                  52
-              </td>
-              <td class="px-6 py-4">
-                35
-              </td>
-              <td class="px-6 py-4">
-              65
-              </td>
+                May 21, 2024 - 9:35 AM
+                </td>
               <td class="px-6 py-4"> 
                 <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-              </td>
+                <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                 4
             </th>
             <td class="px-6 py-4">
-              <div >
-                <img src="/src/img/flashdrive.jpg" class="h-28 flex justify-center items-center" alt="Flash Drive">
-              </div>
+            Mae Pomasheena
             </td>
             <td class="px-6 py-4">
-              Flash Drive
+            maepomasheena
             </td>
             <td class="px-6 py-4">
-              Electronics
+              User
+              </td>
+            <td class="px-6 py-4 text-green-600">
+              Active
             </td>
             <td class="px-6 py-4">
-              56
-            </td>
-            <td class="px-6 py-4">
-              200
-            </td>
-            <td class="px-6 py-4">
-              300
-            </td>
+              April 23, 2024 - 1:06 pM
+              </td>
             <td class="px-6 py-4"> 
               <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-              <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
+              <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
             </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -337,185 +309,37 @@ ADD NEW  </button> </div></a>
               5
           </th>
           <td class="px-6 py-4">
-            <div >
-              <img src="/src/img/Nordic Style Vase.jpg" class="h-28 flex justify-center items-center" alt="Nordic Style Vase">
-            </div>
+         Hinata Shoyo
           </td>
           <td class="px-6 py-4">
-            Nordic Style Vase
+          hinatashoyo
           </td>
           <td class="px-6 py-4">
-            Home Decor
+            User
+            </td>
+          <td class="px-6 py-4 text-green-600">
+            Active
           </td>
           <td class="px-6 py-4">
-            102
-          </td>
-          <td class="px-6 py-4">
-            55
-          </td>
-          <td class="px-6 py-4">
-            105
-          </td>
+            April 21, 2024 - 10:06 PM
+            </td>
           <td class="px-6 py-4"> 
             <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-            <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
+            <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
           </td>
-      </tr>
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-            6
-        </th>
-        <td class="px-6 py-4">
-          <div >
-            <img src="/src/img/spatula.jpg" class="h-28 flex justify-center items-center" alt="Spatula">
-          </div>
-        </td>
-        <td class="px-6 py-4">
-          Spatula
-        </td>
-        <td class="px-6 py-4">
-          Kitchen and Dining
-        </td>
-        <td class="px-6 py-4">
-          35
-        </td>
-        <td class="px-6 py-4">
-          20
-        </td>
-        <td class="px-6 py-4">
-          45
-        </td>
-        <td class="px-6 py-4"> 
-          <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-          <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-        </td>
-    </tr>
-    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-          7
-      </th>
-      <td class="px-6 py-4">
-        <div >
-          <img src="/src/img/ribbon hairclip.jpg" class="h-28 flex justify-center items-center" alt="Ribbon Hair Clip">
-        </div>
-      </td>
-      <td class="px-6 py-4">
-        Ribbon Hair Clip
-      </td>
-      <td class="px-6 py-4">
-        Accessories
-      </td>
-      <td class="px-6 py-4">
-        24
-      </td>
-      <td class="px-6 py-4">
-        30
-      </td>
-      <td class="px-6 py-4">
-        65
-      </td>
-      <td class="px-6 py-4"> 
-        <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-        <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-      </td>
-  </tr>
-  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-        8
-    </th>
-    <td class="px-6 py-4">
-      <div >
-        <img src="/src/img/washitape.jpg" class="h-28 flex justify-center items-center" alt=" Washi Tape Set">
-      </div>
-    </td>
-    <td class="px-6 py-4">
-      Washi Tape Set
-    </td>
-    <td class="px-6 py-4">
-      Books and Stationery 
-    </td>
-    <td class="px-6 py-4">
-      62
-    </td>
-    <td class="px-6 py-4">
-      50
-    </td>
-    <td class="px-6 py-4">
-      100
-    </td>
-    <td class="px-6 py-4"> 
-      <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-      <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-    </td>
-</tr>
-<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-      9
-  </th>
-  <td class="px-6 py-4">
-    <div >
-      <img src="/src/img/Pencil Bag Pouch.jpg" class="h-28 flex justify-center items-center" alt="Pencil Case">
-    </div>
-  </td>
-  <td class="px-6 py-4">
-    Pencil Case
-  </td>
-  <td class="px-6 py-4">
-    Books and Stationery 
-  </td>
-  <td class="px-6 py-4">
-    12
-  </td>
-  <td class="px-6 py-4">
-    250
-  </td>
-  <td class="px-6 py-4">
-    350
-  </td>
-  <td class="px-6 py-4"> 
-    <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-    <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-  </td>
-</tr>
-<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-      10
-  </th>
-  <td class="px-6 py-4">
-    <div >
-      <img src="/src/img/pan.jpg" class="h-28 flex justify-center items-center" alt="Pan">
-    </div>
-  </td>
-  <td class="px-6 py-4">
-    Pan
-  </td>
-  <td class="px-6 py-4">
-    Kitchen and Dining 
-  </td>
-  <td class="px-6 py-4">
-    10
-  </td>
-  <td class="px-6 py-4">
-    400
-  </td>
-  <td class="px-6 py-4">
-    500
-  </td>
-  <td class="px-6 py-4"> 
-    <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
-    <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i>
-  </td>
-</tr>
+      </tr>                       
           </tbody>
       </table>
     </div>
   </div>
 </div>
+
         <!-- sub menu -->
         <script src="submenu.js"> </script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
         <script src="auth.js" defer type="module"></script>
+
 
     </body>
 <html>

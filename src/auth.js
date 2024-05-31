@@ -80,3 +80,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+// Fetch suppliers from Firestore and display in table
+function fetchSuppliers() {
+  db.collection("supplier-list").get().then((querySnapshot) => {
+      const tableBody = document.getElementById("supplier-table-body");
+      let counter = 1;
+      querySnapshot.forEach((doc) => {
+          const supplier = doc.data();
+          const row = `
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">${counter++}</th>
+                  <td class="px-6 py-4">${supplier["supplier-name"]}</td>
+                  <td class="px-6 py-4">${supplier.email}</td>
+                  <td class="px-6 py-4">${supplier["contact-number"]}</td>
+                  <td class="px-6 py-4">${supplier.location}</td>
+                  <td class="px-6 py-4">${supplier["primary-contact"]}</td>
+                  <td class="px-6 py-4">
+                      <a href="#" class="font-medium text-red-500 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></a>
+                      <a href="#" class="font-medium text-green-500 hover:text-green-300 mx-4"><i class="fa-solid fa-edit"></i></a>
+                  </td>
+              </tr>
+          `;
+          tableBody.insertAdjacentHTML('beforeend', row);
+      });
+  }).catch((error) => {
+      console.error("Error fetching suppliers: ", error);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', fetchSuppliers);
