@@ -1,5 +1,5 @@
 const pieChartConfig = {
-  series: [35, 20, 20, 15,10 ], // Adjusted percentages for the specified products
+  series: [35, 20, 20, 15, 10],
   chart: {
     type: "pie",
     width: 280,
@@ -18,39 +18,21 @@ const pieChartConfig = {
   legend: {
     show: false,
   },
-  tooltip: {
-    enabled: true,
-    enabledOnSeries: undefined,
-    shared: false,
-    intersect: true,
-    fillSeriesColor: false,
-    followCursor: true,
-    theme: "dark",
-    style: {
-      fontSize: '12px',
-    },
-    onDatasetHover: {
-      highlightDataSeries: true,
-    },
-    x: {
-      show: false,
-    },
-    y: {
-      formatter: function(value, { seriesIndex, dataPointIndex, w }) {
-        // Define products and their corresponding percentages
-        const products = [
-          { name: 'Flash Drive', percentage: 35 },
-          { name: 'Teddy Bear', percentage: 20 },
-          { name: 'Facial Mask', percentage: 20 },
-          { name: 'Ribbon Hair Clip', percentage: 15 },
-          { name: 'Washi Tape', percentage: 10 }
-        ];
-        // Return the product name and its percentage
-        return `${products[dataPointIndex].name}: ${products[dataPointIndex].percentage}%`;
-      }
-    }
-  },
 };
 
 const pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieChartConfig);
 pieChart.render();
+
+// Display product list
+const productList = document.getElementById("product-list");
+const products = [
+  { name: "Flash Drive", percentage: 35, color: "#E493B3" },
+  { name: "Teddy Bear", percentage: 20, color: "#E1AFD1" },
+  { name: "Facial Mask", percentage: 20, color: "#AD88C6" },
+  { name: "Ribbon Hair Clip", percentage: 15, color: "#7469B6" },
+  { name: "Washi Tape", percentage: 10, color: "#401F71" },
+];
+
+products.forEach(product => {
+  productList.innerHTML += `<div><span class="inline-block w-4 h-4 mr-2 rounded-full" style="background-color:${product.color}"></span>${product.name}: ${product.percentage}%</div>`;
+});
