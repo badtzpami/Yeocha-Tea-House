@@ -13,7 +13,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
       <link rel="stylesheet" href="output.css">
     </head>
-    <body class="bg-white">    
+    <body class="bg-white h-screen">    
                 <div class="container flex flex-col mx-auto bg-gray3">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
         </div>
@@ -62,36 +62,24 @@
                 </span>
               </div>  
             </div>
-            <!-- menu item: categories -->
-             <div class="flex items-center px-4">
-              <i class="fa-solid fa-list text-2xl"></i>
-              <div>
-                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                  <a href="/src/categories.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                    Categories
-                  </a>
-                </span>
-              </div>  
-            </div>
-
-            <!-- Menu item : Products -->
-            <div class="flex items-center px-4">
-              <i class="fa-solid fa-tag text-2xl"></i>
-              <div class="flex-1">
-                <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
-                  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                    Products
-                  </a>
-                </span>
-              </div>
-              <div>
-                <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i>
-              </div>
-            </div>
-            <div id="productsSubMenu" class="hidden ml-10">
-              <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-              <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-            </div>
+<!-- Menu item : Products -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-tag text-2xl"></i>
+  <div class="flex-1">
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+      <a href="products.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Products
+      </a>
+    </span>
+  </div>
+  <div>
+    <!-- <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i> -->
+  </div>
+</div>
+    <!-- <div id="productsSubMenu" class="hidden ml-10">
+      <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
+      <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
+    </div> -->
           <!-- Menu item : Supplier -->
           <div class="flex items-center px-4">
             <i class="fa-solid fa-user text-2xl"></i>
@@ -110,6 +98,17 @@
             <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
             <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
             </div> 
+               <!-- menu item: logistics -->
+               <div class="flex items-center px-4">
+                <i class="fa-solid fa-truck text-2xl"></i>
+                <div>
+                  <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                    <a href="logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                      Logistics
+                    </a>
+                  </span>
+                </div>  
+              </div>
                         <!-- Menu item : Reports -->
                         <div class="flex items-center px-4">
                           <i class="fa-solid fa-circle-exclamation text-2xl"></i>
@@ -135,6 +134,29 @@
                 <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
                 </div>
             </div>
+            <!-- menu item: message -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-message text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Messages
+        </a>
+      </span>
+    </div>  
+  </div>
+
+  <!-- menu item: notifications -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-bell text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Notifications
+        </a>
+      </span>
+    </div>  
+  </div>
           <!-- Menu item : Accounts -->
           <div class="flex items-center px-4">
             <i class="fa-solid fa-user text-2xl"></i>

@@ -2,13 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgTQHJdXv7HTfX7vVSavAmJMVVt92Pcbs",
-  authDomain: "vams-web.firebaseapp.com",
-  projectId: "vams-web",
-  storageBucket: "vams-web.appspot.com",
-  messagingSenderId: "711764254531",
-  appId: "1:711764254531:web:08d45912fee45503e8d9f6"
+  apiKey: "AIzaSyClDx3IwCZBR8d2tmYcdKJDoZbrfglad3s",
+  authDomain: "yeocha-tea-house.firebaseapp.com",
+  projectId: "yeocha-tea-house",
+  storageBucket: "yeocha-tea-house.appspot.com",
+  messagingSenderId: "966247492139",
+  appId: "1:966247492139:web:5eef0f06d355eefd3d586e"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);

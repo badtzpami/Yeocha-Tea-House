@@ -1,71 +1,98 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device,initial-scale=1.0">
+  <script src="auth.js" defer type="module"></script> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="output.css">
-  <title>Login</title>
-   
+    <title>Login</title>
 </head>
 <body>
 
-  <section class="h-full">
-    <div class="container h-full">
-      <div class="flex h-full flex-wrap items-center justify-center text-gray1">
+  <section>
+    <div class="h-screen overflow-hidden">
+      <div
+        class="flex h-full flex-wrap items-center justify-center text-greenie">
         <div class="w-full">
-          <div class="block rounded-lg bg-white2">
-            <div class="g-0 lg:flex lg:flex-wrap justify-center">
-              
-              <!-- Right column container-->
-              <div class="px-4 lg:h-screen md:px-0 lg:w-6/12 flex items-center justify-center  ">
-                <div class="md:mx-6 md:p-12">
-                  <!-- Logo + short tagline-->
-                  <div class="text-center">
-                    <img class="mx-auto w-64" src="/src/img/logo.png" alt="logo"/>
-                    <!-- <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">
-                    </h4> -->
-                  </div>
-                
-                  <form id="loginForm" class="bg-white1 ">                               
-                    <!-- Email ID input -->
-                    <div class="mb-4">
-                      <input type="email" id="email" name="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-gray-600" placeholder="Email ID" required />
-                    </div>
-                    
-                    <!-- Password input -->
-                    <div class="mb-4">
-                      <input type="password" id="password" name="password" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-gray-600" placeholder="Password" required/>
-                    </div>
-      
-                    <!-- Submit button -->
-                    <div class="text-center mt-14">
-                      <button class="h-12 w-64 rounded-2xl px-2 py-2 md:py-3 text-xl font-bold uppercase text-white border-5 border-gray-600 bg-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 hover:border hover:border-gray-600 hover:bg-white1 hover:text-gray-600" type="submit" id="submit">
-                        Log in
-                      </button>
-                    </div>
-      
-                    <!-- Forgot password link -->
-                    <div class="mb-4 text-center">
-                      <a href="#!" class="text-gray-600 hover:underline hover:text-gray-600"><br> Forgot password?</a>
-                    </div>
-                  
-                  </form> 
-                  <div id="error-message" class="mt-4 text-red-500 text-center"></div>
+          <div
+            class="block rounded-lg bg-brownie bg-opacity-20">
+            <div class="g-0 lg:flex lg:flex-wrap">
   
+  
+              <!-- Left column container with background and description-->
+               
+              <div class="flex items-center h-screen lg:w-6/12 bg-cover bg-center relative rounded-r-lg" style="background-image: url('img/bg1.jpg');">
+                
+      
+                
+                <div class="px-4 py-6 text-gray-600 md:mx-6 md:p-12">
+                    <h4 class="mb-6 text-6xl font-semibold text-center">
+                    </h4>
+                    <p class="text-sm">
+                        <!-- Tagline if meron-->
+                    </p>
                 </div>
-              </div>
-              
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            
+                          <!-- Right column container-->
+                          <div class="px-4 lg:h-screen md:px-0 lg:w-6/12 bg-white bg-opacity-55 ">
+                            <div class="md:mx-6 md:p-10">
+                              <!--Logo + short tagline-->
+                              <div class="text-center ">
+                                <img
+                                  class="mx-auto w-[380px]"
+                                  src="img/logo-green1.png"
+                                  alt="logo"/>
+                                <!-- <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">
+                                  tagline hereeeee
+                                </h4> -->
+                              </div>
+                           
+                              <form id="loginForm" class="px-24 p-10 m-14 border border-gray-50 rounded-lg">
+
+                                <h1 class="mb-0 text-3xl font-semibold ">Admin Management Login</h1>
+                                <p class="text-sm mb-6">See whats going on with your business</p>
+                                
+                              <div class="flex items-center justify-between mt-4 ">
+                                <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
+                    
+                    
+                                <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
+                            </div>
+                               
+             <!-- Email ID input -->
+                      <div class="mb-4">
+                        <input type="email" id="email" name="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-greenie" placeholder="Email ID" />
+                      </div>
+                      <!-- Password input -->
+                      <div class="mb-4">
+                        <input type="password" id="password" name="password" class="w-full rounded-md border bg-neuteal-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-greenie" placeholder="Password" />
+                      </div>
+                      <!-- Submit button -->
+                      <div class=" text-center">
+                        <br><br>
+                      
+                        <button class="h-12 w-64 rounded-2xl px-2 py-2 md:py-3 text-xl font-bold uppercase text-white border-5 border-graytext-gray-600 bg-graytext-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-greenie" type="submit" id="loginbtn" onclick="login()">
+                            Log in
+                        </button> 
+                        <!-- Forgot password link -->
+                        <div class="mb-4" ><a href="#!" class="text-greenie hover:underline"> <br> Forgot password?</a>
+                        </div>
+                      </div>
+                    </form> 
+                    
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
               <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>   
               <script src="auth.js" defer type="module"></script>
         

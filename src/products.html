@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+    <head >
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+
+  <link rel="stylesheet" href="output.css">
+    </head>
+    <body class="h-screen">    
+      <div class="container flex flex-col mx-auto bg-gray3">
+        <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
+    </div>
+<!-- sidebar -->
+    <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+    <div class="flex items-center justify-center px-8 py-5">
+        <div class="flex items-center mr-5">
+        <div class="mr-5">
+            <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
+              <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="img/PFP.jpg" alt="avatar image">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-between px-8 py-5"> 
+      <div class="mr-2 ">
+        <a href="javascript:void(0)" class="dark:hover:text-pami hover:text-pami transition-colors duration-200 ease-in-out text-[1.075rem] font-medium text-xl text-gray1">Chris Evans</a>
+        <span class="text-secondary-dark dark:text-stone-500 font-medium block text-[0.95rem] text-gray1">Admin</span>
+    </div>
+    <a class="inline-flex relative items-center group justify-end text-base font-medium leading-normal text-center align-middle cursor-pointer rounded-[.95rem] transition-colors duration-150 ease-in-out text-dark bg-transparent shadow-none border-0 " href="javascript:void(0)">
+      <span class="leading-none transition-colors duration-200 ease-in-out peer shrink-0 group-hover:text-primary text-secondary-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+      </span>
+      </a>
+    </div>
+    <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+    <div class="relative pl-3 my-5 overflow-y-scroll">
+        <div class="flex flex-col w-full font-medium">
+        <!-- menu item -->
+        <div class="block">
+          <div class="px-4">
+          <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Menu</span>
+          </div>
+      </div>
+         <!-- menu item: dashboard -->
+         <div class="flex items-center px-4">
+          <i class="fa-solid fa-chart-column text-2xl"></i>
+          <div>
+            <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+              <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                Dashboard
+              </a>
+            </span>
+          </div>  
+        </div>
+
+ 
+<!-- Menu item : Products -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-tag text-2xl"></i>
+  <div class="flex-1">
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+      <a href="products.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Products
+      </a>
+    </span>
+  </div>
+</div>
+    <!-- <div id="productsSubMenu" class="hidden ml-10">
+      <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
+      <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
+    </div> -->
+        <div id="productsSubMenu" class="hidden ml-10">
+          <!-- <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
+          <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a> -->
+        </div>
+      <!-- Menu item : Supplier -->
+      <div class="flex items-center px-4">
+        <i class="fa-solid fa-user text-2xl"></i>
+        <div class="flex-1">
+          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleSupplierSubMenu()">
+            <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              Supplier
+            </a>
+          </span>
+        </div>
+        <div>
+          <i id="supplierToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleSupplierSubMenu()"></i>
+        </div>
+      </div>
+      <div id="supplierSubMenu" class="hidden ml-10">
+        <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
+        <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
+        </div>  
+           <!-- menu item: logistics -->
+           <div class="flex items-center px-4">
+            <i class="fa-solid fa-truck text-2xl"></i>
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  Logistics
+                </a>
+              </span>
+            </div>  
+          </div>
+               <!-- Menu item : Reports -->
+               <div class="flex items-center px-4">
+                <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+                <div>
+                  <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+                    <a href="reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                      Reports
+                    </a>
+                  </span>
+                </div>  
+                <div>
+                  <!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
+                </div>
+              </div>
+              <!-- <div id="reportsSubMenu" class="hidden ml-10">
+                <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+                <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+                <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+              </div> -->  
+      <!-- Others Section-->
+        <div class="block pt-5 pb-[.15rem]">
+            <div class="px-4 py-[.65rem]">
+            <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
+            </div>
+        </div>
+        <!-- menu item: message -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-message text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Messages
+        </a>
+      </span>
+    </div>  
+  </div>
+
+  <!-- menu item: notifications -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-bell text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Notifications
+        </a>
+      </span>
+    </div>  
+  </div>
+      <!-- Menu item : Accounts -->
+      <div class="flex items-center px-4">
+        <i class="fa-solid fa-user text-2xl"></i>
+        <div>
+          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
+            <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              Accounts
+            </a>
+          </span>
+        </div>  
+        <i id="accountsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+      </div>
+      <div id="accountsSubMenu" class="hidden ml-10">
+        <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
+        <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
+      </div>         
+       <!-- menu item: Logout -->
+       <div class="flex items-center px-4">
+        <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+        <div>
+          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              Log out
+            </a>
+          </span>
+        </div>  
+      </div>
+      </div>
+     </div>
+    </aside>
+    </div>
+       
+<!-- List of Products -->
+ <!-- Milk Tea -->
+<h5 class="ml-[340px]  mt-10 text-4xl font-bold text-gray-600 dark:text-gray-600">Milk Tea</h5>
+
+<div class="bg-white ml-96 p-8 items-center grid grid-cols-2 text-gray-600">
+  <div class="join join-vertical w-full">
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section1" /> 
+      <label for="section1" class="collapse-title text-xl font-medium">
+Yeocha Bubble Tea      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/bubble-tea.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Creamer</li>
+                <li>Sugar syrup</li>
+                <li>Hazelnut</li>
+                <li>Vanilla</li>
+                <li>Caramel</li>
+              </ul>
+            </div>          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section2" /> 
+      <label for="section2" class="collapse-title text-xl font-medium">
+Winter Melon
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/wintermelon.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Creamer</li>
+                <li>Sugar syrup</li>
+                <li>Winter Melon Powder</li>
+              </ul>
+            </div> 
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section3" /> 
+      <label for="section3" class="collapse-title text-xl font-medium">
+        Cookies and Cream
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/COOKIES AND CREAM1.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Creamer</li>
+                <li>Sugar syrup</li>
+                <li>Cookies and Cream Powder</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section4" /> 
+      <label for="section4" class="collapse-title text-xl font-medium">
+        Matcha Latte
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/matcha.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Creamer</li>
+                <li>Sugar syrup</li>
+                <li>Matcha Powder</li>
+              </ul>
+            </div>          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section5" /> 
+      <label for="section5" class="collapse-title text-xl font-medium">
+        Okinawa
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/okinawa1.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Creamer</li>
+                <li>Sugar syrup</li>
+                <li>Okinawa Powder</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Frappe -->
+<h5 class="ml-[340px]  mt-10 text-4xl font-bold text-gray-600 dark:text-gray-600">Frappe</h5>
+<div class="bg-white ml-96 p-8 items-center grid grid-cols-2 text-gray-600">
+  <div class="join join-vertical w-full">
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section11" /> 
+      <label for="section11" class="collapse-title text-xl font-medium">
+Strawberry Frappe     </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/STRAWBERRY FRAPPE1.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fresh milk</li>
+                <li>Whipped cream</li>
+                <li>Sugar syrup</li>
+                <li>Strawberry powder</li>
+                <li>Strawberry sauce</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section12" /> 
+      <label for="section12" class="collapse-title text-xl font-medium">
+        Avocado Graham Frappe     </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/avocado frappe1.jpg" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fresh milk</li>
+                <li>Whipped cream</li>
+                <li>Sugar syrup</li>
+                <li>Avocado powder</li>
+                <li>Crushed graham</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section13" /> 
+      <label for="section13" class="collapse-title text-xl font-medium">
+        Oreo Cookies & Cream
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/COOKIES AND CREAME FRAPPE1.png" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fresh milk</li>
+                <li>Whipped cream</li>
+                <li>Sugar syrup</li>
+                <li>Crushed Oreo</li>
+                <li>Cookies and cream powder</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="frappe-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Snacks -->
+<h5 class="ml-[340px]  mt-10 text-4xl font-bold text-gray-600 dark:text-gray-600">Snacks</h5>
+<div class="bg-white ml-96 p-8 items-center grid grid-cols-2 text-gray-600">
+  <div class="join join-vertical w-full">
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section6" /> 
+      <label for="section6" class="collapse-title text-xl font-medium">
+Fries      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/fries1.avif" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fries</li>
+                <li>Cheese or </li>
+                <li>BBQ or</li>
+                <li>Sour and Cream Powder</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section7" /> 
+      <label for="section7" class="collapse-title text-xl font-medium">
+        Beef Nachos      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/beef nachos.jpg" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fries</li>
+                <li>Beef</li>
+                <li>Garlic Sauce</li>
+                <li>Cheese Sauce</li>
+                <li>Cucumber</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border border-base-300">
+      <input type="radio" name="my-accordion-4" id="section8" /> 
+      <label for="section8" class="collapse-title text-xl font-medium">
+        Bacon Cheese Fries
+      </label>
+      <div class="collapse-content"> 
+        <div class="p-4">
+          <div class="mb-4 grid grid-cols-2">
+            <img src="img/Bacon-Cheese-Fries-1-768x576.webp" class="h-auto max-w-[200px] rounded-lg" alt="Product Image" />
+            <div>
+              <h1 class="text-2xl font-bold text-gray-600">Ingredients</h1>
+              <ul>
+                <li>Fries</li>
+                <li>Bacon</li>
+                <li>Cheese</li>
+                <li>Cheese Sauce</li>
+                <li>BBQ Sauce</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-raw-materials.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Raw Materials
+            </a>
+          </span>
+        </div>
+        <div class="flex items-center px-4">
+          <span class="flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="snack-disposable-items.html" class="flex items-center text-[1.15rem] text-gray-600 hover:text-pami">
+              Disposable Items
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+   
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+
+        <!-- scripts -->
+        <!-- sub menu -->
+         
+        <script src="submenu.js"> </script>
+        <script src="auth.js" defer type="module"></script>
+        <script src="raw-disposable.js"></script>
+
+
+    </body>
+<html>
+

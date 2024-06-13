@@ -2,13 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgTQHJdXv7HTfX7vVSavAmJMVVt92Pcbs",
-  authDomain: "vams-web.firebaseapp.com",
-  projectId: "vams-web",
-  storageBucket: "vams-web.appspot.com",
-  messagingSenderId: "711764254531",
-  appId: "1:711764254531:web:08d45912fee45503e8d9f6"
+  apiKey: "AIzaSyClDx3IwCZBR8d2tmYcdKJDoZbrfglad3s",
+  authDomain: "yeocha-tea-house.firebaseapp.com",
+  projectId: "yeocha-tea-house",
+  storageBucket: "yeocha-tea-house.appspot.com",
+  messagingSenderId: "966247492139",
+  appId: "1:966247492139:web:5eef0f06d355eefd3d586e"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -28,9 +29,11 @@ function fetchSuppliers() {
           <td class="px-6 py-4">${supplier.location}</td>
           <td class="px-6 py-4">${supplier["primary-contact"]}</td>
           <td class="px-6 py-4"> 
-          <a href="#" class="font-medium text-red-500 dark:text-blue-500 hover:text-red-300 delete-btn"><i class="fa-solid fa-trash-can"></i></a>
-          <a href="#" class="font-medium text-green-500 dark:text-blue-500 hover:text-green-300 mx-4 edit-btn"><i class="fa-solid fa-edit"></i></a>
-      </td>
+          <a href="#" class="font-medium text-blue-500  hover:text-blue-300 shopping-btn  mr-2"><i class="fa-solid fa-shopping-cart"></i></a>
+          <a href="#" class="font-medium text-red-500  hover:text-red-300  delete-btn  mr-2"><i class="fa-solid fa-trash-can"></i></a>
+          <a href="#" class="font-medium text-green-500  hover:text-green-300  edit-btn  mr-2"><i class="fa-solid fa-edit"></i></a>
+        </td>
+        
 
         </tr>
       `;

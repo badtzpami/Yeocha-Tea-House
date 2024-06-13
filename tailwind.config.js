@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     colors: {
+      'brownie': "#DEAC80",
+      'brownie2': "#f8eee6",
+      'greenie': "#799351",
       'pami': '#CCAB35',
       'white1': '#ffffff',
       'white2': '#F1F2F7',
@@ -20,7 +23,12 @@ module.exports = {
   },
   plugins: [
     require("tw-elements/plugin.cjs"),
-    require("flowbite/plugin")
+    require("flowbite/plugin"),
+    require('daisyui'),
   ],
+  daisyui: {
+    darkTheme: "light",
+   },
   darkMode: "class"
 };
+
