@@ -3,20 +3,17 @@
     <head>
       <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Notifications</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
-  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <link rel="stylesheet" href="output.css">
     </head>
+
     <body>    
       <div class="container flex flex-col mx-auto bg-white">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
@@ -150,7 +147,7 @@
     <i class="fa-solid fa-message text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Messages
         </a>
       </span>
@@ -206,110 +203,214 @@
 
 
 <!-- Dashboard -->
-<h5 class="ml-[340px] mt-10 text-4xl font-bold  text-gray-600  dark:text-white">Overview</h5>
-
-<div class="bg-white ml-96 p-8 items-center grid grid-cols-3">
-
-<!-- Total Products -->
-    <a href="products.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4 mr-10">
-
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Products</h5>
-      <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">11</p>
-      </a>
-<!-- Total Suppliers -->
-      <a href="view-supplier.html" class="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Suppliers</h5>
-        <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">4</p>
-        </a>
-
-        <!-- Total Orders -->
-        <!-- <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Total Orders</h5>
-          <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">155</p>
-          </a> -->
-
-        <!-- Pending Orders -->
-        <!-- <a href="#" class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Pending Orders</h5>
-            <p class="font-bold text-4xl text-gray-700 dark:text-gray-400">13</p>
-            </a> -->
-  </div>
-
-  
-  <!-- Monthly Sales Chart -->
-  <div class="grid grid-cols-2 gap-1 ml-[340px]">
-   
-    <!-- Top Selling Products Chart -->
-    <div class="relative flex flex-col rounded-xl bg-white hover:bg-gray-100 bg-clip-border text-gray-700 shadow-md max-w-2xl p-6" id="chart-container">
-      <div class="relative mx-4 mt-4">
-        <h6 class="block text-2xl font-semibold leading-relaxed tracking-normal text-gray-600">
-          Top Selling Products
-        </h6>
-      </div>
-      <div class="py-62 mt-4 grid place-items-center px-2 grid-cols-2 gap-4 text-sm">
-        <div id="pie-chart"></div>
-        <div id="product-list" class="space-y-2">
-          <!-- Product list will be inserted here -->
+<h5 class="ml-[340px] mt-10 text-4xl font-bold  text-gray-600  dark:text-white"></h5>
+<div class="grid grid-cols-2 gap-1 ml-[340px]">
+<!--Messaging -->
+<!-- component -->
+<div class="flex h-screen overflow-hidden w-max">
+  <!-- Sidebar -->
+  <div class="w-1/2 bg-white border-r border-gray-300">
+    <!-- Sidebar Header -->
+    <header class="p-4 border-b border-gray-300 flex justify-between items-center bg-gray-600 text-white">
+      <h1 class="text-2xl font-semibold">Chat Web</h1>
+      <div class="relative">
+        <button id="menuButton" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+            <path d="M2 10a2 2 0 012-2h12a2 2 0 012 2 2 2 0 01-2 2H4a2 2 0 01-2-2z"/>
+          </svg>
+        </button>
+        <!-- Menu Dropdown -->
+        <div id="menuDropdown" class="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden">
+          <ul class="py-2 px-3">
+            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-gray-400">Option 1</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-gray-400">Option 2</a></li>
+            <!-- Add more menu options here -->
+          </ul>
         </div>
       </div>
+    </header>
+  
+    <!-- Contact List -->
+    <div class="overflow-y-auto h-screen p-3 mb-9 pb-20">
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Alice Gou</h2>
+          <p class="text-gray-600">Hoorayy!!</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ad922e/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Martin</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/2e83ad/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Charlie</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/c2ebff/0f0b14.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">David</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/e7c2ff/7315d1.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Ella</h2>
+          <p class="text-gray-600">What's the plan for this weekend? Anything fun?</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ffc2e2/ffdbdb.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Fiona</h2>
+          <p class="text-gray-600">Heyyyy</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/f83f3f/4f4f4f.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">George</h2>
+          <p class="text-gray-600">I love you</p>
+        </div>
+      </div>
+      
+      
+      
+      
     </div>
-    
-
-
-<!-- Recent Activity - Inventory Updates -->
-<div class="ml-[340px]mt-10 bg-white rounded-lg shadow-md overflow-hidden my-7">
-  <div class="p-6">
-    <h3 class="text-2xl font-bold mb-4 text-gray-600">Inventory Updates</h3>
-
-    <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
-      <li class="mb-10 ms-6">            
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-        </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Fries</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 10:20 AM</time>
-        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+50 items</p>
-      </li>
-
-      <li class="mb-10 ms-6">            
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-        </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Matcha Powder</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 8:50 AM</time>
-        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+25 items</p>
-      </li>
-
-      <li class="mb-10 ms-6">            
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
-        </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Tissue <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 18, 2024 - 7:20 AM</time>
-        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+50 items</p>
-      </li>
-        
-      <li class="mb-10 ms-6">            
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-          <i class="fa-solid fa-box text-red-800 text-xs"></i>
-        </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Plastic Cup</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Removed on May 18, 2024 - 7:36 AM</time>
-        <p class="mb-4 text-base font-normal text-red-500 dark:text-gray-400">-5 items</p>
-      </li>
-    </ol>
+  </div>
+  
+  <!-- Main Chat Area -->
+  <div class="flex-1">
+      <!-- Chat Header -->
+      <header class="bg-gray-200 p-4 text-gray-700">
+          <h1 class="text-2xl font-bold">Alice Gou</h1>
+      </header>
+      
+      <!-- Chat Messages -->
+      <div class="h-screen overflow-y-auto p-4 pb-36 w-92">
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem ipsum dolor sit.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+         
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem ipsum dolor sit amet.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus!</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+         
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem, ipsum dolor.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet..</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+      
+      <!-- Chat Input -->
+      <footer class="bg-white border-t border-gray-300 p-4 absolute bottom-0 w-1/4">
+          <div class="flex items-center">
+              <input type="text" placeholder="Type a message..." class="min-w-full p-2 rounded-md border border-gray-400 focus:outline-none focus:border-blue-500">
+              <button class="bg-gray-500 text-white px-4 py-2 rounded-md ml-2">Send</button>
+          </div>
+      </footer>
   </div>
 </div>
+<script>
+// JavaScript for showing/hiding the menu
+const menuButton = document.getElementById('menuButton');
+const menuDropdown = document.getElementById('menuDropdown');
+
+menuButton.addEventListener('click', () => {
+  if (menuDropdown.classList.contains('hidden')) {
+    menuDropdown.classList.remove('hidden');
+  } else {
+    menuDropdown.classList.add('hidden');
+  }
+});
+
+// Close the menu if you click outside of it
+document.addEventListener('click', (e) => {
+  if (!menuDropdown.contains(e.target) && !menuButton.contains(e.target)) {
+    menuDropdown.classList.add('hidden');
+  }
+});
+</script>
 
 <!-- scripts -->
 <script src="/src/js/auth.js" defer type="module"></script>
 <script src="/src/js/submenu.js"></script>
-
-<!-- Chart.js Scripts -->
-<script src="/src/js/dashboard-charts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="/src/js/dashboard-charts.js"></script>
 
 
     </body>

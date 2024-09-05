@@ -1,3 +1,5 @@
+// rename = fetch-inventory.js
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
@@ -13,7 +15,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-// ******************************* MILKTEA DISPOSABLE ITEMS
+
 function fetchItems(collectionName, tableBodyId) {
   console.log("Fetching items...");
   const tableBody = document.getElementById(tableBodyId);
@@ -42,7 +44,4 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchItems("disposable-items-snack", "disposable-items-snack-table-body");
   fetchItems("disposable-items-milktea", "disposable-items-frappe-table-body");
   fetchItems("raw-materials-frappe", "raw-materials-frappe-table-body");
-
-
-  
 });

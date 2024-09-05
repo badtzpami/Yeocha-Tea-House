@@ -12,17 +12,15 @@
     <title>Login</title>
 </head>
 <body>
-
   <section>
     <div class="h-screen overflow-hidden">
       <div
-        class="flex h-full flex-wrap items-center justify-center text-greenie">
+        class="flex h-full flex-wrap items-center justify-center text-gray-600">
         <div class="w-full">
           <div
-            class="block rounded-lg bg-brownie bg-opacity-20">
+            class="block rounded-lg bg-gray-100 bg-opacity-20">
             <div class="g-0 lg:flex lg:flex-wrap">
-  
-  
+
               <!-- Left column container with background and description-->
                
               <div class="flex items-center h-screen lg:w-6/12 bg-cover bg-center relative rounded-r-lg" style="background-image: url('img/bg1.jpg');">
@@ -45,14 +43,14 @@
                               <div class="text-center ">
                                 <img
                                   class="mx-auto w-[380px]"
-                                  src="img/logo-green1.png"
+                                  src="img/logo3.png"
                                   alt="logo"/>
                                 <!-- <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">
                                   tagline hereeeee
                                 </h4> -->
                               </div>
                            
-                              <form id="loginForm" class="px-24 p-10 m-14 border border-gray-50 rounded-lg">
+                              <form id="loginForm" class="px-24 m-14 border border-gray-50 rounded-lg">
 
                                 <h1 class="mb-0 text-3xl font-semibold ">Admin Management Login</h1>
                                 <p class="text-sm mb-6">See whats going on with your business</p>
@@ -66,21 +64,22 @@
                                
              <!-- Email ID input -->
                       <div class="mb-4">
-                        <input type="email" id="email" name="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-greenie" placeholder="Email ID" />
+                        <input type="email" id="email" name="email" class="w-full rounded-md border bg-neutral-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-gray-600" placeholder="Email ID" />
                       </div>
                       <!-- Password input -->
                       <div class="mb-4">
-                        <input type="password" id="password" name="password" class="w-full rounded-md border bg-neuteal-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-greenie" placeholder="Password" />
+                        <input type="password" id="password" name="password" class="w-full rounded-md border bg-neuteal-50 px-3 py-2 md:py-3 outline-none placeholder-opacity-75 h-14 border-gray-600" placeholder="Password" />
                       </div>
                       <!-- Submit button -->
                       <div class=" text-center">
                         <br><br>
                       
-                        <button class="h-12 w-64 rounded-2xl px-2 py-2 md:py-3 text-xl font-bold uppercase text-white border-5 border-graytext-gray-600 bg-graytext-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-greenie" type="submit" id="loginbtn" onclick="login()">
+                        <button class="h-12 w-64 rounded-2xl px-2 py-2 md:py-3 text-xl font-bold uppercase text-white border-2 border-transparent bg-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 hover:bg-gray-100 hover:text-gray-600 hover:border-gray-600"
+                        type="submit" id="loginbtn" onclick="login()">
                             Log in
                         </button> 
                         <!-- Forgot password link -->
-                        <div class="mb-4" ><a href="#!" class="text-greenie hover:underline"> <br> Forgot password?</a>
+                        <div class="mb-4" ><a href="#!" class="text-gray-800 hover:underline"> <br> Forgot password?</a>
                         </div>
                       </div>
                     </form> 
@@ -94,7 +93,7 @@
                 </div>
               </section>
               <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>   
-              <script src="auth.js" defer type="module"></script>
+              <script src="js/auth.js" defer type="module"></script>
         
 <body>
 </html>

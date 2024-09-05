@@ -1,3 +1,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities"; 
+@import 'path/to/riva-dashboard-tailwind.css';
+
+
+body{
+  background-color: white;
+}

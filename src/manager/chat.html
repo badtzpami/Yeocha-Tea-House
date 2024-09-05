@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../output.css">
+    </head>
+
+    <body>    
+      <div>
+        <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
+    </div>
+    
+<!-- sidebar -->
+    <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+    <div class="flex items-center justify-center px-8 py-5">
+        <div class="flex items-center mr-5">
+        <div class="mr-5">
+            <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
+              <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="../img/PFP.jpg" alt="avatar image">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-between px-8 py-5"> 
+      <div class="mr-2 ">
+        <a href="javascript:void(0)" class="dark:hover:text-pami hover:text-pami transition-colors duration-200 ease-in-out text-[1.075rem] font-medium text-xl text-gray1">Chris Evans</a>
+        <span class="text-secondary-dark dark:text-stone-500 font-medium block text-[0.95rem] text-gray1">Admin</span>
+    </div>
+    <a class="inline-flex relative items-center group justify-end text-base font-medium leading-normal text-center align-middle cursor-pointer rounded-[.95rem] transition-colors duration-150 ease-in-out text-dark bg-transparent shadow-none border-0 " href="javascript:void(0)">
+      <span class="leading-none transition-colors duration-200 ease-in-out peer shrink-0 group-hover:text-primary text-secondary-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+      </span>
+      </a>
+    </div>
+    <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+    <div class="relative pl-3 my-5 overflow-y-scroll">
+        <div class="flex flex-col w-full font-medium">
+        <!-- menu item -->
+        <div class="block">
+          <div class="px-4">
+          <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Menu</span>
+          </div>
+      </div>
+         <!-- menu item: dashboard -->
+         <div class="flex items-center px-4">
+          <i class="fa-solid fa-chart-column text-2xl"></i>
+          <div>
+            <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+              <a href="dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                Dashboard
+              </a>
+            </span>
+          </div>  
+        </div>
+
+
+<!-- Menu item : Products -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-tag text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+  <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Products
+  </a>
+</span>
+</div>
+<div>
+<i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i>
+</div>
+</div>
+<div id="productsSubMenu" class="hidden ml-10">
+  <a href="/src/manager/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
+  <a href="/src/manager/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
+  <a href="/src/manager/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
+</div>
+<!-- Menu item : Supplier -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-user text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleSupplierSubMenu()">
+  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Supplier
+  </a>
+</span>
+</div>
+<div>
+<i id="supplierToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleSupplierSubMenu()"></i>
+</div>
+</div>
+<div id="supplierSubMenu" class="hidden ml-10">
+<a href="/src/manager/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
+<a href="/src/manager/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
+</div>   
+<!-- menu item: logistics -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-truck text-2xl"></i>
+<div>
+  <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+    <a href="/src/manager/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+      Logistics
+    </a>
+  </span>
+</div>  
+</div>
+<!-- Menu item : Reports -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-circle-exclamation text-2xl"></i>
+<div>
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+  <a href="/src/manager/reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Reports
+  </a>
+</span>
+</div>  
+<div>
+<!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
+</div>
+</div>
+<!-- <div id="reportsSubMenu" class="hidden ml-10">
+<a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+<a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+<a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+</div> -->
+
+
+<!-- Others Section-->
+        <div class="block pt-5 pb-[.15rem]">
+            <div class="px-4 py-[.65rem]">
+            <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
+            </div>
+        </div>
+
+<!-- menu item: message -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-message text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+      <a href="/src/manager/chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Messages
+      </a>
+    </span>
+  </div>  
+</div>
+
+<!-- menu item: notifications -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-bell text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+      <a href="/src/manager/notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Notifications
+      </a>
+    </span>
+  </div>  
+</div>
+<!-- Menu item : Accounts -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-user text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
+  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Accounts
+  </a>
+</span>
+</div>
+<div>
+<i id="accountsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+</div>
+</div>
+<div id="accountsSubMenu" class="hidden ml-10">
+<a href="/src/manager/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
+<a href="/src/manager/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
+</div>
+    
+       <!-- menu item: Logout -->
+       <div class="flex items-center px-4">
+        <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+        <div>
+          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+            <a href="" id="logoutButton" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              Log out
+            </a>
+          </span>
+        </div>  
+      </div>
+        </div>
+        </div>
+    </aside>
+    </div>
+
+<!-- Dashboard -->
+<h5 class="ml-[340px] mt-10 text-4xl font-bold  text-gray-600  dark:text-white"></h5>
+<div class="grid grid-cols-2 gap-1 ml-[340px]">
+<!--Messaging -->
+<!-- component -->
+<div class="flex h-screen overflow-hidden w-max">
+  <!-- Sidebar -->
+  <div class="w-1/2 bg-white border-r border-gray-300">
+    <!-- Sidebar Header -->
+    <header class="p-4 border-b border-gray-300 flex justify-between items-center bg-gray-600 text-white">
+      <h1 class="text-2xl font-semibold">Chat Web</h1>
+      <div class="relative">
+        <button id="menuButton" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+            <path d="M2 10a2 2 0 012-2h12a2 2 0 012 2 2 2 0 01-2 2H4a2 2 0 01-2-2z"/>
+          </svg>
+        </button>
+        <!-- Menu Dropdown -->
+        <div id="menuDropdown" class="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden">
+          <ul class="py-2 px-3">
+            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-gray-400">Option 1</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-gray-400">Option 2</a></li>
+            <!-- Add more menu options here -->
+          </ul>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Contact List -->
+    <div class="overflow-y-auto h-screen p-3 mb-9 pb-20">
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Alice Gou</h2>
+          <p class="text-gray-600">Hoorayy!!</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ad922e/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Martin</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/2e83ad/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Charlie</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/c2ebff/0f0b14.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">David</h2>
+          <p class="text-gray-600">Thank you for your order. Please allow some time for us to process it. We appreciate your patience.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/e7c2ff/7315d1.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Ella</h2>
+          <p class="text-gray-600">What's the plan for this weekend? Anything fun?</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/ffc2e2/ffdbdb.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">Fiona</h2>
+          <p class="text-gray-600">Heyyyy</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+        <div class="w-12 h-12 bg-gray-300 rounded-full mr-3">
+          <img src="https://placehold.co/200x/f83f3f/4f4f4f.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-12 h-12 rounded-full">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold">George</h2>
+          <p class="text-gray-600">I love you</p>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  <!-- Main Chat Area -->
+  <div class="flex-1">
+      <!-- Chat Header -->
+      <header class="bg-gray-200 p-4 text-gray-700">
+          <h1 class="text-2xl font-bold">Alice Gou</h1>
+      </header>
+      
+      <!-- Chat Messages -->
+      <div class="h-screen overflow-y-auto p-4 pb-36 w-92">
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem ipsum dolor sit.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+         
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem ipsum dolor sit amet.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus!</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+         
+         <!-- Incoming Message -->
+         <div class="flex mb-4 cursor-pointer">
+           <div class="w-9 h-9 rounded-full flex items-center justify-center mr-2">
+             <img src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="User Avatar" class="w-8 h-8 rounded-full">
+           </div>
+           <div class="flex max-w-96 bg-white rounded-lg p-3 gap-3">
+             <p class="text-gray-700">Lorem, ipsum dolor.</p>
+           </div>
+         </div>
+         
+         <!-- Outgoing Message -->
+         <div class="flex justify-end mb-4 cursor-pointer">
+           <div class="flex max-w-96 bg-gray-500 text-white rounded-lg p-3 gap-3">
+             <p>Lorem ipsum dolor sit amet..</p>
+           </div>
+           <div class="w-9 h-9 rounded-full flex items-center justify-center ml-2">
+             <img src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato" alt="My Avatar" class="w-8 h-8 rounded-full">
+           </div>
+         </div>
+      
+      <!-- Chat Input -->
+      <footer class="bg-white border-t border-gray-300 p-4 absolute bottom-0 w-1/4">
+          <div class="flex items-center">
+              <input type="text" placeholder="Type a message..." class="min-w-full p-2 rounded-md border border-gray-400 focus:outline-none focus:border-blue-500">
+              <button class="bg-gray-500 text-white px-4 py-2 rounded-md ml-2">Send</button>
+          </div>
+      </footer>
+  </div>
+</div>
+<script>
+// JavaScript for showing/hiding the menu
+const menuButton = document.getElementById('menuButton');
+const menuDropdown = document.getElementById('menuDropdown');
+
+menuButton.addEventListener('click', () => {
+  if (menuDropdown.classList.contains('hidden')) {
+    menuDropdown.classList.remove('hidden');
+  } else {
+    menuDropdown.classList.add('hidden');
+  }
+});
+
+// Close the menu if you click outside of it
+document.addEventListener('click', (e) => {
+  if (!menuDropdown.contains(e.target) && !menuButton.contains(e.target)) {
+    menuDropdown.classList.add('hidden');
+  }
+});
+</script>
+
+<!-- scripts -->
+<script src="../js/auth.js" defer type="module"></script>
+<script src="../js/submenu.js"></script>
+
+
+    </body>
+<html>

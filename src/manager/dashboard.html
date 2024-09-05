@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">  <!-- Local CSS file -->
+  <link rel="stylesheet" href="../output.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <link rel="stylesheet" href="output.css">
-    </head>
     <body>    
       <div class="container flex flex-col mx-auto bg-white">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
@@ -28,7 +30,7 @@
             <div class="flex items-center mr-5">
             <div class="mr-5">
                 <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
-                  <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="img/PFP.jpg" alt="avatar image">
+                  <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="../img/PFP.jpg" alt="avatar image">
                 </div>
             </div>
             </div>
@@ -84,9 +86,9 @@
   </div>
 </div>
     <div id="productsSubMenu" class="hidden ml-10">
-      <a href="/src/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
-      <a href="/src/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
-      <a href="/src/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
+      <a href="/src/manager/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
+      <a href="/src/manager/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
+      <a href="/src/manager/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
     </div>
 <!-- Menu item : Supplier -->
 <div class="flex items-center px-4">
@@ -103,15 +105,15 @@
   </div>
 </div>
 <div id="supplierSubMenu" class="hidden ml-10">
-  <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
-  <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
+  <a href="/src/manager/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
+  <a href="/src/manager/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
 </div>   
    <!-- menu item: logistics -->
    <div class="flex items-center px-4">
     <i class="fa-solid fa-truck text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="/src/manager/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Logistics
         </a>
       </span>
@@ -122,7 +124,7 @@
   <i class="fa-solid fa-circle-exclamation text-2xl"></i>
   <div>
     <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
-      <a href="reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+      <a href="/src/manager/reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
         Reports
       </a>
     </span>
@@ -145,30 +147,29 @@
                 </div>
             </div>
     
-  <!-- menu item: message -->
-  <div class="flex items-center px-4">
-    <i class="fa-solid fa-message text-2xl"></i>
-    <div>
-      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-          Messages
-        </a>
-      </span>
-    </div>  
-  </div>
-
-  <!-- menu item: notifications -->
-  <div class="flex items-center px-4">
-    <i class="fa-solid fa-bell text-2xl"></i>
-    <div>
-      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-          Notifications
-        </a>
-      </span>
-    </div>  
-  </div>
-
+    <!-- menu item: message -->
+    <div class="flex items-center px-4">
+      <i class="fa-solid fa-message text-2xl"></i>
+      <div>
+        <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+          <a href="/src/manager/chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+            Messages
+          </a>
+        </span>
+      </div>  
+    </div>
+  
+    <!-- menu item: notifications -->
+    <div class="flex items-center px-4">
+      <i class="fa-solid fa-bell text-2xl"></i>
+      <div>
+        <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+          <a href="/src/manager/notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+            Notifications
+          </a>
+        </span>
+      </div>  
+    </div>
  <!-- Menu item : Accounts -->
 <div class="flex items-center px-4">
   <i class="fa-solid fa-user text-2xl"></i>
@@ -184,8 +185,8 @@
   </div>
 </div>
 <div id="accountsSubMenu" class="hidden ml-10">
-  <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
-  <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
+  <a href="/src/manager/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
+  <a href="/src/manager/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
 </div>
         
            <!-- menu item: Logout -->
@@ -301,16 +302,13 @@
     </ol>
   </div>
 </div>
-
-<!-- scripts -->
-<script src="/src/js/auth.js" defer type="module"></script>
-<script src="/src/js/submenu.js"></script>
-
-<!-- Chart.js Scripts -->
-<script src="/src/js/dashboard-charts.js"></script>
+<!-- External Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="/src/js/dashboard-charts.js"></script>
 
+<!-- My Scripts -->
+<script src="../js/auth.js" defer type="module"></script>
+<script src="../js/submenu.js" defer></script>
+<script src="../js/dashboard-charts.js" defer></script>
 
     </body>
 <html>

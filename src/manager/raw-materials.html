@@ -14,19 +14,21 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
 
-  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="../output.css">
     </head>
-    <body class="bg-white h-screen">    
-      <div class="container flex flex-col mx-auto bg-gray3">
+    
+    <body>    
+      <div>
         <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
     </div>
+    
 <!-- sidebar -->
     <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
     <div class="flex items-center justify-center px-8 py-5">
         <div class="flex items-center mr-5">
         <div class="mr-5">
             <div class="inline-block relative shrink-0 cursor-pointer rounded-[.95rem] justify-center items-center">
-              <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="img/PFP.jpg" alt="avatar image">
+              <img class="w-[100px] h-[100px] shrink-0 inline-block rounded-[.95rem]" src="../img/PFP.jpg" alt="avatar image">
             </div>
         </div>
         </div>
@@ -59,129 +61,132 @@
           <i class="fa-solid fa-chart-column text-2xl"></i>
           <div>
             <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-              <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+              <a href="dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                 Dashboard
               </a>
             </span>
           </div>  
         </div>
 
- 
+
 <!-- Menu item : Products -->
 <div class="flex items-center px-4">
-  <i class="fa-solid fa-tag text-2xl"></i>
-  <div class="flex-1">
-    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
-      <a href="products.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-        Products
-      </a>
-    </span>
-  </div>
-  <div>
-    <!-- <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i> -->
-  </div>
+<i class="fa-solid fa-tag text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
+  <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Products
+  </a>
+</span>
 </div>
-    <!-- <div id="productsSubMenu" class="hidden ml-10">
-      <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-      <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-    </div> -->
-        <div id="productsSubMenu" class="hidden ml-10">
-          <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-          <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-        </div>
-      <!-- Menu item : Supplier -->
-      <div class="flex items-center px-4">
-        <i class="fa-solid fa-user text-2xl"></i>
-        <div class="flex-1">
-          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleSupplierSubMenu()">
-            <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-              Supplier
-            </a>
-          </span>
-        </div>
-        <div>
-          <i id="supplierToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleSupplierSubMenu()"></i>
-        </div>
-      </div>
-      <div id="supplierSubMenu" class="hidden ml-10">
-        <a href="/src/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
-        <a href="/src/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
-        </div>  
-           <!-- menu item: logistics -->
-           <div class="flex items-center px-4">
-            <i class="fa-solid fa-truck text-2xl"></i>
-            <div>
-              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                  Logistics
-                </a>
-              </span>
-            </div>  
-          </div>
-               <!-- Menu item : Reports -->
-               <div class="flex items-center px-4">
-                <i class="fa-solid fa-circle-exclamation text-2xl"></i>
-                <div>
-                  <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
-                    <a href="reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-                      Reports
-                    </a>
-                  </span>
-                </div>  
-                <div>
-                  <!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
-                </div>
-              </div>
-              <!-- <div id="reportsSubMenu" class="hidden ml-10">
-                <a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
-                <a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
-                <a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
-              </div> -->  
-      <!-- Others Section-->
+<div>
+<i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i>
+</div>
+</div>
+<div id="productsSubMenu" class="hidden ml-10">
+  <a href="/src/manager/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
+  <a href="/src/manager/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
+  <a href="/src/manager/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
+</div>
+<!-- Menu item : Supplier -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-user text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleSupplierSubMenu()">
+  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Supplier
+  </a>
+</span>
+</div>
+<div>
+<i id="supplierToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleSupplierSubMenu()"></i>
+</div>
+</div>
+<div id="supplierSubMenu" class="hidden ml-10">
+<a href="/src/manager/view-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">View Supplier</a>
+<a href="/src/manager/add-supplier.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Supplier</a>
+</div>   
+<!-- menu item: logistics -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-truck text-2xl"></i>
+<div>
+  <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+    <a href="/src/manager/logistics.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+      Logistics
+    </a>
+  </span>
+</div>  
+</div>
+<!-- Menu item : Reports -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-circle-exclamation text-2xl"></i>
+<div>
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleReportsSubMenu()">
+  <a href="/src/manager/reports.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Reports
+  </a>
+</span>
+</div>  
+<div>
+<!-- <i id="reportsToggleIcon" class="fa-solid fa-angle-up ml-32 cursor-pointer" onclick="toggleReportsSubMenu()"></i> -->
+</div>
+</div>
+<!-- <div id="reportsSubMenu" class="hidden ml-10">
+<a href="/src/reports/sales-by-date.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Sales by Date</a>
+<a href="/src/reports/monthly-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Monthly Sales</a>
+<a href="/src/reports/daily-sales.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Daily Sales</a>
+</div> -->
+
+
+<!-- Others Section-->
         <div class="block pt-5 pb-[.15rem]">
             <div class="px-4 py-[.65rem]">
             <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
             </div>
         </div>
-        <!-- menu item: message -->
-  <div class="flex items-center px-4">
-    <i class="fa-solid fa-message text-2xl"></i>
-    <div>
-      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-          Messages
-        </a>
-      </span>
-    </div>  
-  </div>
 
-  <!-- menu item: notifications -->
-  <div class="flex items-center px-4">
-    <i class="fa-solid fa-bell text-2xl"></i>
-    <div>
-      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-          Notifications
-        </a>
-      </span>
-    </div>  
-  </div>
-      <!-- Menu item : Accounts -->
-      <div class="flex items-center px-4">
-        <i class="fa-solid fa-user text-2xl"></i>
-        <div>
-          <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
-            <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-              Accounts
-            </a>
-          </span>
-        </div>  
-        <i id="accountsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
-      </div>
-      <div id="accountsSubMenu" class="hidden ml-10">
-        <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
-        <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
-      </div>         
+<!-- menu item: message -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-message text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+      <a href="/src/manager/chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Messages
+      </a>
+    </span>
+  </div>  
+</div>
+
+<!-- menu item: notifications -->
+<div class="flex items-center px-4">
+  <i class="fa-solid fa-bell text-2xl"></i>
+  <div>
+    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+      <a href="/src/manager/notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        Notifications
+      </a>
+    </span>
+  </div>  
+</div>
+<!-- Menu item : Accounts -->
+<div class="flex items-center px-4">
+<i class="fa-solid fa-user text-2xl"></i>
+<div class="flex-1">
+<span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
+  <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+    Accounts
+  </a>
+</span>
+</div>
+<div>
+<i id="accountsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+</div>
+</div>
+<div id="accountsSubMenu" class="hidden ml-10">
+<a href="/src/manager/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
+<a href="/src/manager/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
+</div>
+    
        <!-- menu item: Logout -->
        <div class="flex items-center px-4">
         <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
@@ -193,16 +198,17 @@
           </span>
         </div>  
       </div>
-      </div>
-     </div>
+        </div>
+        </div>
     </aside>
     </div>
+
 
 <!-- Categories -->
 <div class="grid gap-4 ml-96">
   <!-- Right column -->
   <div class="bg-white1 p-4 mx-20 mt-10">
-    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 my-4 pt-4 pb-4"></i> Raw Materials Inventory for Snacks 🍟</h2>
+    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 my-4 pt-4 pb-4"></i>Raw Materials</h2>
 
                 <!-- Table -->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -215,19 +221,21 @@
                           <th scope="col" class="px-6 py-3">Unit</th>
                       </tr>
                   </thead>
-                  <tbody id="raw-materials-snack-table-body">
+                  <tbody id="materials-table-body">
                           <!-- Rows will be inserted here by JavaScript -->
                       </tbody>
                   </table>
               </div>
           </div>
       </div>
-        <!-- sub menu -->
-        <script src="submenu.js"> </script>
+        <!-- scripts -->
+        <script src="../js/auth.js" defer type="module"></script>
+        <script src="../js/submenu.js"></script>
+        <script src="../js/raw-disposable.js" defer type="module"></script>
+        <script src="../js/manage-data.js"></script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-        <script src="auth.js" defer type="module"></script>
-        <script src="raw-disposable.js" defer type="module"></script>
+        
 
     </body>
 <html>

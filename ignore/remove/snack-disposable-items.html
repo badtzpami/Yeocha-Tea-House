@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raw Materials</title>
+  <title>Disposable Items </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -78,17 +78,14 @@
     </span>
   </div>
   <div>
-    <!-- <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i> -->
+    <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i>
   </div>
 </div>
-    <!-- <div id="productsSubMenu" class="hidden ml-10">
-      <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-      <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-    </div> -->
-        <div id="productsSubMenu" class="hidden ml-10">
-          <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-          <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-        </div>
+    <div id="productsSubMenu" class="hidden ml-10">
+      <a href="/src/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
+      <a href="/src/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
+      <a href="/src/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
+    </div>
       <!-- Menu item : Supplier -->
       <div class="flex items-center px-4">
         <i class="fa-solid fa-user text-2xl"></i>
@@ -148,7 +145,7 @@
     <i class="fa-solid fa-message text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Messages
         </a>
       </span>
@@ -160,7 +157,7 @@
     <i class="fa-solid fa-bell text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Notifications
         </a>
       </span>
@@ -202,20 +199,21 @@
 <div class="grid gap-4 ml-96">
   <!-- Right column -->
   <div class="bg-white1 p-4 mx-20 mt-10">
-    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 my-4 pt-4 pb-4"></i> Raw Materials Inventory for Frappe 🥤 </h2>
-
+    <h2 class="text-gray-600 text-2xl font-bold"> <i class="fa-solid fa-list mx-4 my-4 pt-4 pb-4"></i>Disposable Items Inventory for Snacks 🍟
+    </h2>
+    <!-- ♡ฅ^•ﻌ•^ฅ♡ -->
                 <!-- Table -->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                   <table class="w-full text-base text-center text-gray1">
                     <thead class="text-base uppercase bg-gray-600 text-white1">
                       <tr>
                           <th scope="col" class="px-6 py-3">ID</th>
-                          <th scope="col" class="px-6 py-3">Ingredient</th>
+                          <th scope="col" class="px-6 py-3">Item</th>
                           <th scope="col" class="px-6 py-3">Stock</th>
                           <th scope="col" class="px-6 py-3">Unit</th>
                       </tr>
                   </thead>
-                  <tbody id="raw-materials-frappe-table-body">
+                  <tbody id="disposable-items-snack-table-body">
                           <!-- Rows will be inserted here by JavaScript -->
                       </tbody>
                   </table>
@@ -223,11 +221,10 @@
           </div>
       </div>
         <!-- sub menu -->
-        <script src="submenu.js"> </script>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-        <script src="auth.js" defer type="module"></script>
-        <script src="raw-disposable.js" defer type="module"></script>
+        <script src="/src/js/auth.js" defer type="module"></script>
+        <script src="/src/js/submenu.js"></script>
+        <script src="/src/js/raw-disposable.js" defer type="module"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     </body>
 <html>

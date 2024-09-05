@@ -3,19 +3,21 @@
     <head>
       <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Notifications</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/riva-dashboard-tailwind/riva-dashboard.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <link rel="stylesheet" href="output.css">
     </head>
-    
-    <body>    
+    <body class="bg-white h-screen">    
       <div class="container flex flex-col mx-auto bg-white">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
         </div>
@@ -59,20 +61,20 @@
               <i class="fa-solid fa-chart-column text-2xl"></i>
               <div>
                 <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                  <a href="/src/dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+                  <a href="dashboard.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
                     Dashboard
                   </a>
                 </span>
               </div>  
             </div>
-
+ 
 
 <!-- Menu item : Products -->
 <div class="flex items-center px-4">
   <i class="fa-solid fa-tag text-2xl"></i>
   <div class="flex-1">
     <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
-      <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+      <a href="products.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
         Products
       </a>
     </span>
@@ -142,52 +144,49 @@
                 <span class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Others</span>
                 </div>
             </div>
-<!-- menu item: message -->
-<div class="flex items-center px-4">
-  <i class="fa-solid fa-message text-2xl"></i>
-  <div>
-    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-      <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-        Messages
-      </a>
-    </span>
-  </div>  
-</div>
+    
+  <!-- menu item: message -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-message text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Messages
+        </a>
+      </span>
+    </div>  
+  </div>
 
-<!-- menu item: notifications -->
-<div class="flex items-center px-4">
-  <i class="fa-solid fa-bell text-2xl"></i>
-  <div>
-    <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-      <a href="notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
-        Notifications
-      </a>
-    </span>
-  </div>  
-</div>
-<!-- Menu item : Accounts -->
+  <!-- menu item: notifications -->
+  <div class="flex items-center px-4">
+    <i class="fa-solid fa-bell text-2xl"></i>
+    <div>
+      <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+        <a href="notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+          Notifications
+        </a>
+      </span>
+    </div>  
+  </div>
+
+ <!-- Menu item : Accounts -->
 <div class="flex items-center px-4">
   <i class="fa-solid fa-user text-2xl"></i>
-  <div>
+  <div class="flex-1">
     <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleAccountsSubMenu()">
       <a href="javascript:;" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
         Accounts
       </a>
     </span>
-  </div>  
-  <i id="accountsToggleIcon" class="fa-solid fa-angle-up ml-28 cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+  </div>
+  <div>
+    <i id="accountsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleAccountsSubMenu()"></i>
+  </div>
 </div>
 <div id="accountsSubMenu" class="hidden ml-10">
   <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
   <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
 </div>
-    <!-- <i id="accountsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleAccountsSubMenu()"></i> -->
-  </div>
-</div>
-<!-- <div id="accountsSubMenu" class="hidden ml-10">
-  <a href="/src/manage-group.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Groups</a>
-  <a href="/src/manage-users.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Users</a>
-</div> -->
         
            <!-- menu item: Logout -->
            <div class="flex items-center px-4">
@@ -206,53 +205,76 @@
         </div>
 
 
-<!-- Reports -->
-<h5 class="ml-[340px] mt-10 text-4xl font-bold text-gray-600 dark:text-white">Reports</h5>
+<!-- Dashboard -->
+<h5 class="ml-[340px] mt-10 text-4xl font-bold  text-gray-600  dark:text-white">Notifications</h5>
+<div class="grid grid-cols-2 gap-1 ml-[340px]">
+<!--Notifications -->
+<div class="ml-[340px]mt-10 bg-white rounded-lg shadow-md overflow-hidden my-7">
+  <div class="p-6">
+    <!-- <h3 class="text-2xl font-bold mb-4 text-gray-600">Inventory and Delivery Updates</h3> -->
 
-<div class="bg-white ml-96 p-8 items-center grid grid-cols-2">
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Fries</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 10:20 AM</time>
+        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+50 items</p>
+      </li>
 
-<!-- Export Products -->
-<div class="block max-w-lg max-h-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-  <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Export Products</h5>
-  <div class="flex space-x-4 justify-end items-end">
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      Excel
-    </button>
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      PDF
-    </button>
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Matcha Powder</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 19, 2024 - 8:50 AM</time>
+        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+25 items</p>
+      </li>
+
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <i class="fa-solid fa-box text-blue-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Tissue <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Added on May 18, 2024 - 7:20 AM</time>
+        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+50 items</p>
+      </li>
+
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-red-900">
+          <i class="fa-solid fa-box text-red-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Plastic Cup</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Removed on May 18, 2024 - 7:36 AM</time>
+        <p class="mb-4 text-base font-normal text-red-500 dark:text-gray-400">-5 items</p>
+      </li>
+
+      <!-- Delivery Updates -->
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
+          <i class="fa-solid fa-truck text-green-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Delivery: Matcha Powder</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Delivered on May 20, 2024 - 2:15 PM</time>
+        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+25 items</p>
+      </li>
+
+      <li class="mb-10 ms-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
+          <i class="fa-solid fa-truck text-green-800 text-xs"></i>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Delivery: Plastic Cups</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Delivered on May 20, 2024 - 3:00 PM</time>
+        <p class="mb-4 text-base font-normal text-green-500 dark:text-gray-400">+30 items</p>
+      </li>
+    </ol>
   </div>
 </div>
 
-<!-- Export Deliveries -->
-<div class="block max-w-lg max-h-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-  <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Export Deliveries</h5>
-  <div class="flex space-x-4 justify-end items-end">
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      Excel
-    </button>
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      PDF
-    </button>
-  </div>
-</div>  
-<!-- Export Inventory -->
-<div class="block max-w-lg max-h-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
-  <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray1 dark:text-white">Export Inventory</h5>
-  <div class="flex space-x-4 justify-end items-end">
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      Excel
-    </button>
-    <button class="h-12 w-28 rounded-2xl px-2 py-4 md:py-3 text-base font-medium text-white border-5 border-gray-600 hover:border hover:border-gray-600 bg-gray-600 shadow-md hover:bg-white hover:text-gray-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50" type="button">
-      PDF
-    </button>
-  </div>
-</div>
-
-        <!-- scripts -->
-        <script src="/src/js/auth.js" defer type="module"></script>
-        <script src="/src/js/submenu.js"></script>
-     
+<!-- scripts -->
+<script src="/src/js/auth.js" defer type="module"></script>
+<script src="/src/js/submenu.js"></script>
 
 
     </body>

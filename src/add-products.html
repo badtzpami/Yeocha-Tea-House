@@ -13,7 +13,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
       <link rel="stylesheet" href="output.css">
     </head>
-    <body class="bg-white h-screen">    
+    <body>    
                 <div class="container flex flex-col mx-auto bg-gray3">
             <aside class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-white2 border-r border-r-dashed border-r-neutral-200 sidenav fixed-start loopple-fixed-start px-8 text-gray3" id="sidenav-main"><div class="flex shrink-0 px-8 items-center justify-between h-[20px]">
         </div>
@@ -67,19 +67,20 @@
   <i class="fa-solid fa-tag text-2xl"></i>
   <div class="flex-1">
     <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]" onclick="toggleProductsSubMenu()">
-      <a href="products.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+      <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
         Products
       </a>
     </span>
   </div>
   <div>
-    <!-- <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i> -->
+    <i id="productsToggleIcon" class="fa-solid fa-angle-up cursor-pointer" onclick="toggleProductsSubMenu()"></i>
   </div>
 </div>
-    <!-- <div id="productsSubMenu" class="hidden ml-10">
-      <a href="/src/manage-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Manage Products</a>
-      <a href="/src/add-products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Add Products</a>
-    </div> -->
+    <div id="productsSubMenu" class="hidden ml-10">
+      <a href="/src/raw-materials.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Raw Materials</a>
+      <a href="/src/disposable-items.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Disposable Items</a>
+      <a href="/src/products.html" class="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-pami">Ingredients</a>
+    </div>
           <!-- Menu item : Supplier -->
           <div class="flex items-center px-4">
             <i class="fa-solid fa-user text-2xl"></i>
@@ -139,7 +140,7 @@
     <i class="fa-solid fa-message text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="chat.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Messages
         </a>
       </span>
@@ -151,7 +152,7 @@
     <i class="fa-solid fa-bell text-2xl"></i>
     <div>
       <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-        <a href="#" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
+        <a href="notifications.html" class="flex items-center text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-pami">
           Notifications
         </a>
       </span>
@@ -233,9 +234,6 @@
       </label>
       <input type="file" id="uploadFile1" class="hidden"/>
   </div>
-
-
-
   </div>
   <div class="flex">
 <div class="">
@@ -266,12 +264,6 @@
 </div>
 </div>
  
- 
-
-
-
- 
-                  
                       <!-- Button -->
                       <button class="h-14 w-44 rounded-2xl px-2 py- md:py-3 text-base font-medium text-white border-5 border-pami bg-gray-600 hover:border hover:border-gray-600  hover:bg-white1 hover:text-gray-600 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 " type="button" id="categorybtn">
                         Add Category
@@ -281,46 +273,10 @@
                 </table>
               </div>
           </div>
-
-
-
-
         <!-- sub menu -->
-        <script src="/src/submenu.js"> </script>
+        <script src="/src/js/auth.js" defer type="module"></script>
+        <script src="/src/js/submenu.js"></script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-        <script src="auth.js" defer type="module"></script>
-
-
-
-
-        <script>
-          // Get the input elements for selling price and buying price
-          const productQuantityInput = document.getElementById('productQuantity')
-          const sellingPriceInput = document.getElementById('sellingPrice');
-          const buyingPriceInput = document.getElementById('buyingPrice');
-          
-          
-          // Function to remove non-numeric characters from the input value
-          const restrictToNumbers = function(inputElement) {
-            inputElement.addEventListener('input', function() {
-              // Remove non-numeric characters from the input value
-              this.value = this.value.replace(/\D/g, '');
-            });
-          };
-        
-          // Apply the function to both input elements
-          restrictToNumbers(productQuantityInput);
-          restrictToNumbers(sellingPriceInput);
-          restrictToNumbers(buyingPriceInput);
-        </script>
-
-        <!-- upload image -->
-        <script>
-          document.querySelector('label[for="uploadFile1"]').addEventListener('click', function() {
-              document.getElementById('uploadFile1').click();
-          });
-      </script>
-  
-    </body>
+    </body> 
 <html>
